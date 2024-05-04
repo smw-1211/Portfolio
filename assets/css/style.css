@@ -41,6 +41,26 @@ h6 {
   color: white;
 }
 
+.dark-mode #hero {
+  background: url("../img/cover-bg-dark.jpg") top right no-repeat;
+}
+.dark-mode #hero h1 {
+  color: white;
+}
+
+.dark-mode #contact .info {
+  padding: 30px;
+}
+
+.dark-mode #contact #contact-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode #contact #contact-wrapper-4 {
+  width: 1200px;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -441,10 +461,10 @@ section {
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
+/* --------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
-.facts .count-box {
+/* .facts .count-box {
   padding: 30px 30px 25px 30px;
   margin-top: 30px;
   width: 100%;
@@ -481,7 +501,58 @@ section {
   margin: 0;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
+} */
+
+/*--------------------------------------------------------------
+# Facts
+--------------------------------------------------------------*/
+.facts {
+  padding-bottom: 30px;
 }
+
+.facts .count-box {
+  padding: 30px;
+  width: 100%;
+}
+
+.facts .count-box i {
+  display: block;
+  font-size: 44px;
+  color: #149ddd;
+  float: left;
+}
+
+.facts .count-box span {
+  font-size: 48px;
+  line-height: 40px;
+  display: block;
+  font-weight: 700;
+  color: #050d18;
+  margin-left: 60px;
+}
+
+.facts .count-box p {
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  color: #122f57;
+}
+
+.facts .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #122f57;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.facts .count-box a:hover {
+  color: #1f5297;
+}
+
 
 /*--------------------------------------------------------------
 # Akills
@@ -585,6 +656,10 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio #research {
+  margin-left: 350px;
 }
 
 .portfolio #portfolio-flters {

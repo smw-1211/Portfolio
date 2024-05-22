@@ -645,6 +645,20 @@ section {
   margin-left: 350px;
 }
 
+#research-publications .portfolio-wrap {
+  width: 800px;
+  margin-left: 60px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 992px) {
+  #research-publications .portfolio-wrap {
+    width: 370px !important;
+    margin-left: 0px !important;
+    margin-bottom: 25px;
+  }  
+}
+
 .portfolio #portfolio-flters {
   padding: 0;
   margin: 0 auto 25px auto;

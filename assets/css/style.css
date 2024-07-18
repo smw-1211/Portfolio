@@ -65,6 +65,18 @@ h6 {
   color: white;
 }
 
+.dark-mode .facts .purecounter {
+  color: white;
+}
+
+.dark-mode .facts .purecounter-clients {
+  color: white;
+}
+
+.dark-mode .facts .facts-symbol {
+  color: white;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -501,7 +513,6 @@ section {
   display: block;
   font-weight: 700;
   color: #050d18;
-  margin-left: 60px;
 }
 
 .facts .count-box p {
@@ -524,6 +535,10 @@ section {
 
 .facts .count-box a:hover {
   color: #1f5297;
+}
+
+.facts .purecounter {
+  color: white;
 }
 
 @media (max-width: 992px) {

@@ -77,6 +77,10 @@ h6 {
   color: white;
 }
 
+.dark-mode #hero .tagline {
+  display: none !important;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -323,6 +327,10 @@ h6 {
   position: relative;
 }
 
+#hero .tagline {
+  display: none;
+}
+
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
@@ -403,6 +411,7 @@ h6 {
 
   #hero p {
     margin-top: 35rem;
+    display: none;
   }
 
   .dark-mode #hero p {
@@ -500,6 +509,12 @@ section {
 
 .about .content p:last-child {
   margin-bottom: 0;
+}
+
+.about .portfolio-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------------------------------------

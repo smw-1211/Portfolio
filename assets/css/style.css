@@ -33,6 +33,20 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+#show-more-button{
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border: none;
+  background-color: #00efc7;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  /* display: none; */
+}
+
 /*-------------------------
 # Toggle theme
 --------------------------*/

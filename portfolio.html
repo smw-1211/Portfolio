@@ -478,9 +478,12 @@
         After an year of thorough research, we focused on the booming world of online shopping. 
         With more people buying goods online, it was crucial to understand why they make the choices they do. 
         We dug into data from online purchases and website visits to see what it could tell us about consumer behavior and decision-making.
-        This chapter zooms in on key moments in online shopping and how people's personalities affect what they buy. 
-        We also looked at how data analysis is changing the game in understanding consumer behavior online.
-        Our goal is to make sense of how people shop online today and how their personalities shape their decisions, using insights from our research.        
+        <p id="toggleBtn5" onclick="toggleText('toggleBtn5', 'research-content-hidden-5', 'toggleBtn-show-less-5')">Show More..</p> 
+          <p id="research-content-hidden-5" style="text-align: center;">
+          This chapter zooms in on key moments in online shopping and how people's personalities affect what they buy. 
+          We also looked at how data analysis is changing the game in understanding consumer behavior online.
+          Our goal is to make sense of how people shop online today and how their personalities shape their decisions, using insights from our research.        
+          </p><p id="toggleBtn-show-less-5" style="display: none;" onclick="toggleShowLessBtnText('toggleBtn-show-less-5', 'research-content-hidden-5', 'toggleBtn5')">Show Less..</p>
         </p>
     </section>
     <!-- End Research Publications Section -->
@@ -515,9 +518,12 @@
       </div>
       <p style="text-align: center;">
         This paper addresses a solution to implement voting system using facial recognition using this model which has a commendable accuracy of 96%.
+        <p id="toggleBtn1" onclick="toggleText('toggleBtn1', 'research-content-hidden-1', 'toggleBtn-show-less-1')">Show More..</p> 
+        <p id="research-content-hidden-1" style="text-align: center"> 
         In our country, voting takes place with the help of EVM's but there is no prior surviellance to justify if the voter who is voting the same as in the electoral list.
         Our proposed approach acts as a bridge and helps to cater this issue using OpenCV specifically Haar classifier.
         This research particularly focuses on the use of Haar cascades and the LBPH Face recognizer algorithm as a hybrid combination for the smart voting system as an authentication approach.
+        </p><p id="toggleBtn-show-less-1" style="display: none;" onclick="toggleShowLessBtnText('toggleBtn-show-less-1', 'research-content-hidden-1', 'toggleBtn1')">Show Less..</p>
       </p>
 
       <div class="row">
@@ -546,12 +552,16 @@
         and Deep Learning. With thousands of people investing into the stock market and 
         many more joining the suit lured by its lucrativeness or by the idea of paying 
         lower taxes, it has become necessary to read this stochastic time series data, 
-        popularly known as the stock price data. Through this paper, we want to display 
+        popularly known as the stock price data. 
+        <p id="toggleBtn2" onclick="toggleText('toggleBtn2', 'research-content-hidden-2', 'toggleBtn-show-less-2')">Show More..</p> 
+        <p id="research-content-hidden-2" style="text-align: center"> 
+        Through this paper, we want to display 
         most of the recent research done in this domain and propose a new state-of-the-art 
         GAN architecture that consists of a hybrid of Naive Bayes Classifier for Sentiment 
         Analysis of Financial News and LSTM for prediction as the Generator and MLP as the 
         Discriminator. The proposed system forecasts stock values using financial data and 
-        conducts sentiment analysis on financial news.
+        conducts sentiment analysis on financial news.</p>
+        <p id="toggleBtn-show-less-2" style="display: none;" onclick="toggleShowLessBtnText('toggleBtn-show-less-2', 'research-content-hidden-2', 'toggleBtn2')">Show Less..</p>
       </p>
 
       <div class="row">
@@ -577,11 +587,14 @@
       <p style="text-align: center;">
         With the rise in the adaptability of emotions and technology in humans; we as 
         humans have seen a lot of transformation in our individual thought process.
+        <p id="toggleBtn3" onclick="toggleText('toggleBtn3', 'research-content-hidden-3', 'toggleBtn-show-less-3')">Show More..</p> 
+        <p id="research-content-hidden-3" style="text-align: center"> 
         With the help of machine learning algorithms, we aim at 
         understanding how a certain user responds to questions asked him from different 
         categories which can help us understand his/her behavior.Hence, the ideology 
         behind this research is crystal clear in determining the psychological state of 
         the audience from varied age groups categorized as youths, adults, and millennials.
+        </p><p id="toggleBtn-show-less-3" style="display: none;" onclick="toggleShowLessBtnText('toggleBtn-show-less-3', 'research-content-hidden-3', 'toggleBtn3')">Show Less..</p>
       </p>
 
       <div class="row">
@@ -608,14 +621,17 @@
       <p style="text-align: center;">
         The intake of fast food is rapidly accelerating due to the factors specifically 
         the cost-effectiveness and being tasty, but not all individuals are aware of its 
-        harmful long-term effects on physical and mental health. On the issue of nutrition 
+        harmful long-term effects on physical and mental health. 
+      <p id="toggleBtn4" onclick="toggleText('toggleBtn4', 'research-content-hidden-4', 'toggleBtn-show-less-4')">Show More..</p> 
+      <p id="research-content-hidden-4" style="text-align: center;">On the issue of nutrition 
         and fast food intake this is an unexplored field of research so far. In this paper, 
         we have profoundly analyzed the relationship using Machine Learning models, which is 
         a new approach for nutrition-based analysis. The primary objective is to apply association, classification, and 
         regression algorithms in order to predict BMI, sickness, pre-COVID and post-COVID 
         eating schedule and the experiments conducted during this research reveal that this 
         method significantly improves the analysis of real-world data as compared to the 
-        traditional statistical approach with a commendable accuracy of 98%.
+        traditional statistical approach with a commendable accuracy of 98%.</p>
+      <p id="toggleBtn-show-less-4" style="display: none;" onclick="toggleShowLessBtnText('toggleBtn-show-less-4', 'research-content-hidden-4', 'toggleBtn4')">Show Less..</p>
       </p>
 
     </section>
@@ -629,7 +645,7 @@
           <!--Change this image with your resume page-->
           <img src="assets/img/resume-img.jpg" class="img-fluid" alt="">
     <!-- Provide a download link for the PDF file -->
-    <p><a href="https://drive.google.com/file/d/1KFEmcz1j6c5Geyji5Xm6beEI_DT6P_dQ/view?usp=sharing" download>Download PDF</a></p>      
+    <p><a href="https://drive.google.com/file/d/1KFEmcz1j6c5Geyji5Xm6beEI_DT6P_dQ/view?usp=sharing" target="_blank" download>Download PDF</a></p>      
         </div>
       </div>
     </section>
@@ -697,6 +713,32 @@
         var element = document.body;
         element.classList.toggle("dark-mode");
       }
+
+      function toggleText(paragraphId, hiddenTxt, showLessBtnId) {
+        var hiddenText = document.getElementById(hiddenTxt);
+        var button = document.getElementById(paragraphId);
+        var showLessButton = document.getElementById(showLessBtnId);
+
+        button.style.display = "none";
+
+        if(button.style.display == "none"){
+          hiddenText.style.display = "block";
+          showLessButton.style.display = "block";
+        }else {
+          hiddenText.style.display = "none";
+        }
+      }
+
+      function toggleShowLessBtnText(showLessBtnId, hiddenTxt, paragraphId) {
+        var button = document.getElementById(showLessBtnId);
+        var hiddenText = document.getElementById(hiddenTxt);
+        var showMoreButton = document.getElementById(paragraphId);
+
+        button.style.display = "none";
+        hiddenText.style.display = "none";
+        showMoreButton.style.display = "block";
+      }
+
     </script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>

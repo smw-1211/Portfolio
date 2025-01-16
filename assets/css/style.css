@@ -95,6 +95,10 @@ h6 {
   display: none !important;
 }
 
+.dark-mode .skills .progress .skill {
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -865,6 +869,26 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
+}
+
+#toggleBtn1, #toggleBtn2, #toggleBtn3, #toggleBtn4, #toggleBtn5 {
+  display: none; 
+}
+
+@media (max-width: 499px) {
+  #research-content-hidden-1, #research-content-hidden-2, #research-content-hidden-3, #research-content-hidden-4, #research-content-hidden-5 {
+    display: none;
+  }
+
+  #toggleBtn1, #toggleBtn2, #toggleBtn3, #toggleBtn4, #toggleBtn5 {
+    display: block; 
+    color: cornflowerblue;
+  }
+
+  #toggleBtn-show-less-1, #toggleBtn-show-less-2, #toggleBtn-show-less-3, #toggleBtn-show-less-4, #toggleBtn-show-less-5 {
+    display: block; 
+    color: coral;
+  }
 }
 
 /*--------------------------------------------------------------

@@ -33,6 +33,72 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+#show-more-button{
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  border: none;
+  background-color: #00efc7;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 30px auto;
+  /* display: none; */
+}
+
+/*-------------------------
+# Toggle theme
+--------------------------*/
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode #hero {
+  background: url("../img/cover-bg-dark.jpg") top right no-repeat;
+}
+.dark-mode #hero h1 {
+  color: white;
+}
+
+.dark-mode #contact .info {
+  padding: 30px;
+}
+
+.dark-mode #contact #contact-wrapper {
+  justify-content: center;
+  align-items: center;
+}
+
+.dark-mode #contact #contact-wrapper-4 {
+  width: 1200px;
+}
+
+.dark-mode .section-title h2 {
+  color: white;
+}
+
+.dark-mode .facts .purecounter {
+  color: white;
+}
+
+.dark-mode .facts .purecounter-clients {
+  color: white;
+}
+
+.dark-mode .facts .facts-symbol {
+  color: white;
+}
+
+.dark-mode #hero .tagline {
+  display: none !important;
+}
+
+.dark-mode .skills .progress .skill {
+  color: #fff;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -274,9 +340,13 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/hero-bg.jpg") top right no-repeat;
+  background: url("../img/cover-bg.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
+}
+
+#hero .tagline {
+  display: none;
 }
 
 @media (min-width: 992px) {
@@ -287,7 +357,7 @@ h6 {
 
 #hero:before {
   content: "";
-  background: rgba(255, 255, 255, 0.8);
+  /* background: rgba(255, 255, 255, 0.8); */
   position: absolute;
   bottom: 0;
   top: 0;
@@ -332,20 +402,46 @@ h6 {
   color: #0563bb;
 }
 
+@media (max-width: 768px) {
+  #hero .tagline{
+    display: flex !important;
+    margin-top: 38rem !important;
+    color: #45505b;
+    margin: 15px 0 0 0;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
 @media (max-width: 992px) {
   #hero {
     text-align: center;
   }
 
   #hero h1 {
+    display: none;
     font-size: 32px;
     line-height: 36px;
   }
 
   #hero p {
-    margin-top: 10px;
-    font-size: 20px;
-    line-height: 24px;
+    margin-top: 35rem;
+    display: none;
+  }
+
+  .dark-mode #hero p {
+    display: none;
+  }
+
+  .container-hero .bxl-linkedin:before {
+    display: none;
+  }
+
+  .container-hero .bxl-github:before {
+    display: none;
   }
 }
 
@@ -433,50 +529,78 @@ section {
   margin-bottom: 0;
 }
 
+.about .portfolio-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*--------------------------------------------------------------
 # Facts
 --------------------------------------------------------------*/
+.facts {
+  padding-bottom: 30px;
+}
+
 .facts .count-box {
-  padding: 30px 30px 25px 30px;
-  margin-top: 30px;
+  padding: 30px;
   width: 100%;
-  position: relative;
-  text-align: center;
-  background: #fff;
 }
 
 .facts .count-box i {
-  position: absolute;
-  top: -25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  background: #0563bb;
-  color: #fff;
-  border-radius: 50px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
+  display: block;
+  font-size: 44px;
+  color: #149ddd;
+  float: left;
 }
 
 .facts .count-box span {
-  font-size: 36px;
+  font-size: 48px;
+  line-height: 40px;
   display: block;
-  font-weight: 600;
-  color: #011426;
+  font-weight: 700;
+  color: #050d18;
 }
 
 .facts .count-box p {
-  padding: 0;
-  margin: 0;
+  padding: 15px 0 0 0;
+  margin: 0 0 0 60px;
   font-family: "Raleway", sans-serif;
   font-size: 14px;
+  color: #122f57;
+}
+
+.facts .count-box a {
+  font-weight: 600;
+  display: block;
+  margin-top: 20px;
+  color: #122f57;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  transition: ease-in-out 0.3s;
+}
+
+.facts .count-box a:hover {
+  color: #1f5297;
+}
+
+.facts .purecounter {
+  color: white;
+}
+
+@media (max-width: 992px) {
+  .dark-mode .facts .count-box span {
+    color: aliceblue;
+  }
+
+  .dark-mode .facts .count-box p {
+    color: aliceblue;
+    font-size: large;
+  }
 }
 
 /*--------------------------------------------------------------
-# Akills
+# Skills
 --------------------------------------------------------------*/
 .skills .progress {
   height: 60px;
@@ -577,6 +701,24 @@ section {
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+}
+
+.portfolio .research {
+  margin-left: 350px;
+}
+
+#research-publications .portfolio-wrap {
+  width: 800px;
+  margin-left: 60px;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 992px) {
+  #research-publications .portfolio-wrap {
+    width: 370px !important;
+    margin-left: 0px !important;
+    margin-bottom: 25px;
+  }  
 }
 
 .portfolio #portfolio-flters {
@@ -727,6 +869,26 @@ section {
 .portfolio .portfolio-wrap:hover .portfolio-info::after {
   bottom: 15px;
   right: 15px;
+}
+
+#toggleBtn1, #toggleBtn2, #toggleBtn3, #toggleBtn4, #toggleBtn5 {
+  display: none; 
+}
+
+@media (max-width: 499px) {
+  #research-content-hidden-1, #research-content-hidden-2, #research-content-hidden-3, #research-content-hidden-4, #research-content-hidden-5 {
+    display: none;
+  }
+
+  #toggleBtn1, #toggleBtn2, #toggleBtn3, #toggleBtn4, #toggleBtn5 {
+    display: block; 
+    color: cornflowerblue;
+  }
+
+  #toggleBtn-show-less-1, #toggleBtn-show-less-2, #toggleBtn-show-less-3, #toggleBtn-show-less-4, #toggleBtn-show-less-5 {
+    display: block; 
+    color: coral;
+  }
 }
 
 /*--------------------------------------------------------------

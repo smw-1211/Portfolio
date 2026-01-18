@@ -1734,3 +1734,118 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+/* ==================================================
+   SKILLS SECTION (Icons + Bars)
+================================================== */
+
+#skills {
+  padding: 80px 0;
+}
+
+.skills-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.skill-icon-item {
+  background: #fff;
+  padding: 22px 15px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.skill-icon-item i {
+  font-size: 38px;
+  color: #0563bb;
+  margin-bottom: 10px;
+}
+
+.skill-icon-item p {
+  margin: 0;
+  font-weight: 600;
+}
+
+.skill-icon-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(5, 99, 187, 0.25);
+}
+
+/* Tooltip */
+.skill-icon-item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: -38px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0563bb;
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.skill-icon-item:hover::after {
+  opacity: 1;
+}
+
+/* Skill bars */
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.skill-header i {
+  color: #0563bb;
+  margin-right: 8px;
+}
+
+.skill {
+  font-weight: 600;
+}
+
+.skill-percentage {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.progress-bar-wrap {
+  background: #f2f3f5;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 10px;
+  background: linear-gradient(135deg, #0563bb, #00efc7);
+  transition: width 1s ease;
+}
+
+/* Dark mode */
+.dark-mode .skill-icon-item {
+  background: #1f1f1f;
+}
+
+.dark-mode .progress-bar-wrap {
+  background: #333;
+}
+
+.dark-mode .skill-icon-item p,
+.dark-mode .skill {
+  color: #fff;
+}

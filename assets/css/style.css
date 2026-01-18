@@ -1061,9 +1061,137 @@ section {
   border: 2px solid #0563bb;
 }
 
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
+/* ==================================================
+   PORTFOLIO / PROJECTS SECTION
+================================================== */
+
+#portfolio {
+  padding: 80px 0;
+}
+
+.portfolio-filters {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.portfolio-filters li {
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: #f2f3f5;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.portfolio-filters li:hover,
+.portfolio-filters .active {
+  background: #0563bb;
+  color: #fff;
+}
+
+.portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio-wrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-wrap img {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-wrap:hover img {
+  transform: scale(1.08);
+}
+
+/* Overlay */
+.portfolio-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.96);
+  opacity: 0;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.portfolio-wrap:hover::before {
+  opacity: 1;
+}
+
+.portfolio-info {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: 0.4s;
+}
+
+.portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.portfolio-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tech-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #0563bb;
+  color: #fff;
+}
+
+.portfolio-links a {
+  font-size: 26px;
+  color: #0563bb;
+}
+
+.portfolio-links a:hover {
+  color: #148af9;
+}
+
+/* Dark mode */
+.dark-mode .portfolio-wrap::before {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.dark-mode .portfolio-info h4,
+.dark-mode .portfolio-info p {
+  color: #fff;
+}
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }

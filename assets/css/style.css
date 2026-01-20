@@ -1977,3 +1977,57 @@ section {
 .dark-mode .skill {
   color: #fff;
 }
+
+/* ==================================================
+   RESEARCH & PUBLICATIONS
+================================================== */
+
+#research-publications {
+  padding: 80px 0;
+}
+
+.research-wrap {
+  margin-bottom: 18px;
+}
+
+.research-intro {
+  font-size: 15px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.research-description {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 10px;
+}
+
+.hidden-content {
+  display: inline;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #0563bb;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.toggle-less {
+  color: coral;
+}
+
+/* Mobile handling */
+@media (max-width: 768px) {
+  .hidden-content {
+    display: none;
+  }
+}
+
+/* Dark mode */
+.dark-mode .research-description,
+.dark-mode .research-intro {
+  color: #ddd;
+}

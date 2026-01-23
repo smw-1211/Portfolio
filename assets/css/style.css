@@ -1824,28 +1824,6 @@ section {
   box-shadow: 0 15px 40px rgba(5, 99, 187, 0.25);
 }
 
-/* Tooltip */
-.skill-icon-item::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: -38px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #0563bb;
-  color: #fff;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 6px;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity 0.3s;
-}
-
-.skill-icon-item:hover::after {
-  opacity: 1;
-}
-
 /* Skill bars */
 .skill-item {
   margin-bottom: 20px;
@@ -2027,7 +2005,6 @@ section {
   text-align: center;
   box-shadow: var(--shadow-soft);
   position: relative;
-  overflow: hidden;
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -2070,8 +2047,6 @@ section {
 .skill-icon-item::after {
   content: attr(data-tooltip);
   position: absolute;
-  bottom: -45px;
-  left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(135deg, var(--primary), var(--accent));
   color: #fff;

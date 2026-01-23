@@ -2119,3 +2119,48 @@ section {
 .dark-mode .progress-bar-wrap {
   background: #334155;
 }
+
+/* =========================================================
+   SHOW / HIDE BUTTON (OPTIONAL STYLING SAFETY)
+========================================================= */
+
+.toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Mobile emphasis */
+@media (max-width: 768px) {
+  .toggle-btn {
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: #e0e7ff;
+    color: #4338ca;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Hidden state */
+  .hidden-content {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* 🔥 CRITICAL FIX:
+     If JS sets display:block → SHOW IT */
+  .hidden-content[style*="display: block"] {
+    display: block !important;
+    opacity: 1;
+    max-height: 2000px;
+    margin-top: 16px;
+    padding: 18px 22px;
+  }
+}

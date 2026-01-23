@@ -51,86 +51,6 @@
 }
 
 /*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
-.back-to-top {
-  position: fixed;
-  visibility: hidden;
-  opacity: 0;
-  right: 15px;
-  bottom: 15px;
-  z-index: 996;
-  background: #0563bb;
-  width: 40px;
-  height: 40px;
-  border-radius: 50px;
-  transition: all 0.4s;
-}
-
-.back-to-top i {
-  font-size: 28px;
-  color: #fff;
-  line-height: 0;
-}
-
-.back-to-top:hover {
-  background: #0678e3;
-  color: #fff;
-}
-
-.back-to-top.active {
-  visibility: visible;
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #0563bb;
-  border-top-color: #fff;
-  border-bottom-color: #fff;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 768px) {
-  [data-aos-delay] {
-    transition-delay: 0 !important;
-  }
-}
-
-/*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
 #header {
@@ -2030,4 +1950,48 @@ section {
 .dark-mode .research-description,
 .dark-mode .research-intro {
   color: #ddd;
+}
+
+
+/* ==================================================
+   SMALL SCREEN FIXES
+================================================== */
+
+@media (max-width: 576px) {
+  .skills-icons-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-info h4 {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   GLOBAL ENHANCEMENTS
+========================================================= */
+
+:root {
+  --primary: #0563bb;
+  --secondary: #00efc7;
+  --accent: #6a11cb;
+  --soft-bg: #f7f9fc;
+  --dark-bg: #0f172a;
+  --card-light: #ffffff;
+  --card-dark: #1e293b;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 25px 60px rgba(5, 99, 187, 0.35);
+}
+
+.section-bg {
+  background: linear-gradient(135deg, #f8fbff, #eef3fa);
+}
+
+.dark-mode .section-bg {
+  background: linear-gradient(135deg, #0b1220, #111827);
+}
+
+/* Smooth entrance */
+[data-aos] {
+  transition-duration: 0.9s !important;
 }

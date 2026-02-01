@@ -59,10 +59,10 @@
     <section id="hero" class="d-flex flex-column justify-content-center">
       <div class="container container-hero" data-aos="zoom-in" data-aos-delay="100">
         <h1 class="container-name">Soham Manoj Wattamwar</h1>
-        <p>A <span class="typed" data-typed-items="Software Engineer, Data Science Enthusiast, Fullstack Developer, Technogeek"></span></p>
+        <p><span class="typed" data-typed-items="Software Engineer, Data Science Enthusiast, Fullstack Developer, Technogeek"></span></p>
         <span class="tagline">Welcome to my portfolio!!</span>
         <div class="social-links">
-          <a href="https://in.linkedin.com/in/soham-wattamwar-9b790119a" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.linkedin.com/in/wattamwarsoham/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
           <a href="https://github.com/smw-1211" class="github" target="_blank"><i class="bx bxl-github"></i></a>
         </div>
       </div>
@@ -103,7 +103,7 @@
                   <li><strong>Fullstack Development:</strong> React, .NET, Java, JavaScript</li>
                   <li><strong>AI/ML & Computer Vision:</strong> Python, TensorFlow, Keras, OpenCV</li>
                   <li><strong>Languages:</strong> JavaScript, Python, C++, Java, HTML5, CSS3</li>
-                  <li><strong>Professional Experience:</strong> CDAC, Blackcoffer (Intern), UST (Developer)</li>
+                  <li><strong>Professional Experience:</strong> UST (Developer - Software engg.), CDAC (NLP Project Intern), Blackcoffer (Web Dev Intern)</li>
                 </ul>
               </div>
 
@@ -1028,6 +1028,22 @@
   
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      function toggleMobileMenu() {
+        debugger
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('mobile-nav-active');
+      }
+
+      // Close menu on window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+          document.getElementById('navbar').classList.remove('mobile-nav-active');
+        }
+      });
+    </script>
 </body>
 
 </html>

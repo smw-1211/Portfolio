@@ -1004,13 +1004,25 @@ section {
   padding: 8px 18px;
   border-radius: 20px;
   background: #f2f3f5;
+  color: #dfd2d2;
   font-weight: 600;
   transition: 0.3s;
 }
 
 .portfolio-filters li:hover,
 .portfolio-filters .active {
-  background: #0563bb;
+  background: #fff;
+  color: #fff;
+}
+
+/* Dark mode filters */
+.dark-mode .portfolio-filters li {
+  background: #e0e0e0;
+  color: #030202;
+}
+
+.dark-mode .portfolio-filters li:hover,
+.dark-mode .portfolio-filters .active {
   color: #fff;
 }
 
@@ -1152,14 +1164,8 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
-}
-
-.portfolio #portfolio-flters li:hover,
-.portfolio #portfolio-flters li.filter-active {
-  color: #0563bb;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -1825,6 +1831,13 @@ section {
 }
 
 /* Skill bars */
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  width: 100%;
+}
+
 .skill-item {
   margin-bottom: 20px;
 }
@@ -1938,6 +1951,10 @@ section {
 @media (max-width: 576px) {
   .skills-icons-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-content {
+    grid-template-columns: 1fr;
   }
 
   .portfolio-info h4 {
@@ -2222,7 +2239,6 @@ section {
 
 .portfolio-filters li {
   background: linear-gradient(135deg, #f1f5f9, #ffffff);
-  color: #334155;
   border-radius: 999px;
   padding: 8px 18px;
   font-weight: 600;

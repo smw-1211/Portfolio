@@ -2366,3 +2366,54 @@ section {
     padding: 18px 22px;
   }
 }
+/* =========================================================
+   3️⃣ SKILLS BAR — 2 COLUMN GRID (FIX)
+========================================================= */
+
+.skills-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 40px;
+  margin-top: 40px;
+}
+
+/* Individual bar colors */
+.skill-item:nth-child(1) .progress-bar {
+  background: linear-gradient(90deg, #7c3aed, #a78bfa);
+}
+
+.skill-item:nth-child(2) .progress-bar {
+  background: linear-gradient(90deg, #0ea5e9, #67e8f9);
+}
+
+.skill-item:nth-child(3) .progress-bar {
+  background: linear-gradient(90deg, #16a34a, #86efac);
+}
+
+.skill-item:nth-child(4) .progress-bar {
+  background: linear-gradient(90deg, #2563eb, #93c5fd);
+}
+
+.skill-item:nth-child(5) .progress-bar {
+  background: linear-gradient(90deg, #f97316, #fdba74);
+}
+
+.skill-item:nth-child(6) .progress-bar {
+  background: linear-gradient(90deg, #14b8a6, #5eead4);
+}
+
+/* Progress wrapper */
+.progress-bar-wrap {
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+/* =========================================================
+   RESPONSIVE FIX
+========================================================= */
+
+@media (max-width: 768px) {
+  .skills-content {
+    grid-template-columns: 1fr;
+  }
+}

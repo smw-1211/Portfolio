@@ -2367,6 +2367,141 @@ section {
   }
 }
 /* =========================================================
+   TECH STACK PILLS — MULTI COLOR
+========================================================= */
+
+.tech-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Technology-based colors */
+.tech-badge.react {
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+}
+
+.tech-badge.js {
+  background: linear-gradient(135deg, #facc15, #ca8a04);
+  color: #1e293b;
+}
+
+.tech-badge.html {
+  background: linear-gradient(135deg, #fb7185, #e11d48);
+}
+
+.tech-badge.css {
+  background: linear-gradient(135deg, #60a5fa, #2563eb);
+}
+
+.tech-badge.python {
+  background: linear-gradient(135deg, #22c55e, #15803d);
+}
+
+.tech-badge.ai {
+  background: linear-gradient(135deg, #a78bfa, #7c3aed);
+}
+
+.tech-badge.backend {
+  background: linear-gradient(135deg, #14b8a6, #0f766e);
+}
+
+.tech-badge.frontend {
+  background: linear-gradient(135deg, #38bdf8, #0284c7);
+}
+
+.tech-badge.sql {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+/* =========================================================
+   DARK MODE FIXES
+========================================================= */
+
+.dark-mode .portfolio-filters li {
+  background: #020617;
+  color: #cbd5f5;
+  border-color: #334155;
+}
+
+.dark-mode .portfolio-wrap::before {
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.9),
+    rgba(2, 6, 23, 0.95)
+  );
+}
+
+/* =========================================================
+   1️⃣ PORTFOLIO FILTERS — LIGHT PASTEL COLORS
+========================================================= */
+
+.portfolio-filters li {
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Hover + Active — LIGHT COLORS */
+.portfolio-filters li[data-filter="*"]:hover,
+.portfolio-filters li[data-filter="*"].active {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.portfolio-filters li[data-filter=".react"]:hover,
+.portfolio-filters li[data-filter=".react"].active {
+  background: #cffafe;
+  color: #0e7490;
+}
+
+.portfolio-filters li[data-filter=".ai"]:hover,
+.portfolio-filters li[data-filter=".ai"].active {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.portfolio-filters li[data-filter=".frontend"]:hover,
+.portfolio-filters li[data-filter=".frontend"].active {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.portfolio-filters li[data-filter=".backend"]:hover,
+.portfolio-filters li[data-filter=".backend"].active {
+  background: #dcfce7;
+  color: #047857;
+}
+
+/* =========================================================
+   2️⃣ SKILLS — MULTI-COLOR ICONS + CARDS
+========================================================= */
+
+/* Icon color mapping */
+.skill-icon-item:nth-child(1) i { color: #7c3aed; } /* AI/ML */
+.skill-icon-item:nth-child(2) i { color: #0ea5e9; } /* NLP */
+.skill-icon-item:nth-child(3) i { color: #e11d48; } /* Web */
+.skill-icon-item:nth-child(4) i { color: #16a34a; } /* Data */
+.skill-icon-item:nth-child(5) i { color: #f97316; } /* C++ */
+.skill-icon-item:nth-child(6) i { color: #2563eb; } /* Java */
+.skill-icon-item:nth-child(7) i { color: #22c55e; } /* Node */
+.skill-icon-item:nth-child(8) i { color: #38bdf8; } /* React */
+.skill-icon-item:nth-child(9) i { color: #64748b; } /* .NET */
+.skill-icon-item:nth-child(10) i { color: #14b8a6; } /* Testing */
+
+/* Hover gradient per card */
+.skill-icon-item:hover {
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+}
+
+.dark-mode .skill-icon-item:hover p {
+  color: #111 !important;
+}
+
+/* =========================================================
    3️⃣ SKILLS BAR — 2 COLUMN GRID (FIX)
 ========================================================= */
 
@@ -2416,4 +2551,71 @@ section {
   .skills-content {
     grid-template-columns: 1fr;
   }
+}
+
+/* =========================================================
+   RESEARCH PUBLICATIONS — HIDDEN CONTENT SUBSECTION
+========================================================= */
+
+/* Main research block safety */
+.research-wrap {
+  display: block;
+}
+
+/* Intricate subsection styling */
+.hidden-content {
+  display: block;
+  margin-top: 18px;
+  padding: 18px 22px;
+
+  /* Visual separation */
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+  border-left: 4px solid #6366f1;
+  border-radius: 12px;
+
+  /* Typography */
+  font-size: 14px;
+  line-height: 1.7;
+  color: #334155;
+
+  /* Containment */
+  position: relative;
+}
+
+/* Decorative accent */
+.hidden-content::before {
+  content: "Details";
+  position: absolute;
+  top: -10px;
+  left: 16px;
+  background: #6366f1;
+  color: #fff;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.4px;
+}
+
+/* Lists inside hidden content */
+.hidden-content ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.hidden-content li {
+  margin-bottom: 6px;
+}
+
+/* Code / inline highlights */
+.hidden-content code {
+  background: #e0e7ff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* Links */
+.hidden-content a {
+  color: #4f46e5;
+  font-weight: 600;
 }

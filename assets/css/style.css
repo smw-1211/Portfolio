@@ -2619,3 +2619,17 @@ section {
   color: #4f46e5;
   font-weight: 600;
 }
+
+/* ===============================
+   INTERACTION SAFETY
+================================ */
+
+/* Ensure hover overlay does NOT capture hidden content */
+.research-hover-content {
+  pointer-events: none;
+}
+
+.hidden-content,
+.hidden-content * {
+  pointer-events: auto;
+}

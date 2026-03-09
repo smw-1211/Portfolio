@@ -2633,3 +2633,45 @@ section {
 .hidden-content * {
   pointer-events: auto;
 }
+
+/* =========================================================
+   DARK MODE — PORTFOLIO & RESEARCH TEXT FIX
+========================================================= */
+
+/* Portfolio Info Text - Dark Mode */
+.dark-mode .portfolio-info h4,
+.dark-mode .portfolio-info p {
+  color: #fff;
+}
+
+/* Research Publications - Dark Mode */
+.dark-mode .portfolio-wrap .portfolio-info h4,
+.dark-mode .portfolio-wrap .portfolio-info p {
+  color: #fff;
+}
+
+/* Additional styling for tech badges in dark mode */
+.dark-mode .tech-badge {
+  color: #fff;
+}
+
+/* Ensure all text elements in portfolio cards are white in dark mode */
+.dark-mode .portfolio-wrap:hover .portfolio-info {
+  color: #fff;
+}
+
+.dark-mode .portfolio-wrap:hover .portfolio-info h4,
+.dark-mode .portfolio-wrap:hover .portfolio-info p {
+  color: #fff;
+}
+
+/* Research section specific */
+.dark-mode #research-publications .portfolio-info h4,
+.dark-mode #research-publications .portfolio-info p {
+  color: #fff;
+}
+
+.dark-mode #research-publications .portfolio-wrap .portfolio-info h4,
+.dark-mode #research-publications .portfolio-wrap .portfolio-info p {
+  color: #fff;
+}

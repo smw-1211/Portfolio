@@ -12,3 +12,17 @@ A modern, fully responsive personal portfolio website showcasing professional ex
 - **Mobile Navigation**: Hamburger menu with full-screen overlay for mobile devices
 - **Sticky Navigation**: Fixed top navigation bar for easy access to all sections
 - **Keyboard Navigation**: Accessible scrolling with smooth behavior
+
+### 📱 Mobile Optimization
+- Hamburger menu with animated toggle button
+- Full-screen mobile navigation overlay
+- Touch-friendly interface
+- Optimized layout for all screen sizes
+
+### 🌓 Dark Mode
+- Comprehensive dark theme implementation
+- Persistent color scheme across all sections
+- Optimized contrast for readability in both themes
+- Toggle button with gradient styling
+
+---

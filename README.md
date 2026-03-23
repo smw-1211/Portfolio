@@ -63,3 +63,26 @@ A modern, fully responsive personal portfolio website showcasing professional ex
   - Projects completed
   - Publications
   - Professional awards
+
+### 5. **Skills Section**
+Contains two subsections:
+
+#### Skills Icon Grid (12 items - Pyramid Layout)
+- AI/ML
+- NLP
+- Web Foundation (HTML5, CSS3, JavaScript)
+- Data Science (Python)
+- Systems (C++)
+- Enterprise (Java, SpringBoot)
+- Backend (Node.js, Express)
+- Frontend (React, Next.js, Angular)
+- .NET Stack (ASP.NET Core, Entity Framework)
+- Testing (Jest, Cypress, JUnit)
+- DevOps (CI/CD, Kubernetes, Jenkins, GitHub Actions)
+- Databases (MySQL, MongoDB, PostgreSQL, Firebase)
+
+#### Skills Progress Bars (10 items - 2-Column Grid Layout)
+- Responsive grid: 2 columns on desktop, 1 column on mobile (≤576px)
+- Full width utilization
+- Smooth progress animations
+- Gradient color styling

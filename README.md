@@ -26,3 +26,40 @@ A modern, fully responsive personal portfolio website showcasing professional ex
 - Toggle button with gradient styling
 
 ---
+
+## 📋 Sections
+
+### 1. **Navigation Bar** (Top)
+- Desktop horizontal menu with 7 navigation items
+- Mobile hamburger menu (visible ≤768px)
+- Dark mode toggle button
+- Sticky positioning for easy navigation
+
+**Navigation Items:**
+- Home
+- About
+- Skills
+- Portfolio
+- Research
+- Resume
+- Contact
+
+### 2. **Hero Section**
+- Full-screen hero with background image
+- Animated typed text effect showcasing multiple roles
+- Professional tagline
+- Social media links (LinkedIn, GitHub)
+
+### 3. **About Section**
+- Personal introduction
+- Profile image
+- Detailed background information
+
+### 4. **Facts Section**
+- Key statistics about professional journey
+- Counter animations
+- Metrics highlighting:
+  - Years of experience
+  - Projects completed
+  - Publications
+  - Professional awards

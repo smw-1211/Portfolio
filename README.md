@@ -86,3 +86,23 @@ Contains two subsections:
 - Full width utilization
 - Smooth progress animations
 - Gradient color styling
+
+### 6. **Portfolio/Projects Section**
+- Filterable project gallery with 18+ projects
+- Filter categories:
+  - All
+  - React JS
+  - AI/ML
+  - Core Frontend
+  - Core Backend
+- High-contrast filter buttons (optimized for accessibility)
+- Image gallery with lightbox preview
+- Isotope layout for filtering and sorting
+
+**Sample Projects:**
+- Foodify Website (React)
+- Data Analysis (Python/AI)
+- Landing Page (HTML5, CSS3, JavaScript)
+- OpenCV Fundamentals (Computer Vision)
+- Hangman Game (Web)
+- And more...

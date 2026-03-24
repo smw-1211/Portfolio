@@ -106,3 +106,28 @@ Contains two subsections:
 - OpenCV Fundamentals (Computer Vision)
 - Hangman Game (Web)
 - And more...
+
+### 7. **Research Publications Section**
+Comprehensive research work across multiple conferences and journals:
+
+#### Taylor & Francis Publication
+- Consumer Social Behavioral Psychology influence on online purchasing
+- Co-authored research on e-commerce behavior analysis
+
+#### IEEE Publications
+1. **SMARTGEN CON 2021** - Optimal Face Recognition System using Haar Classifier (96% accuracy)
+   - Facial recognition voting system
+   - OpenCV and Haar Cascade implementation
+
+2. **GCAT 2021** - Leveraging Market Sentiment for Stock Price Prediction using GAN
+   - Sentiment analysis on financial news
+   - LSTM-based prediction model
+
+#### Springer Publications
+1. **IACC 2021** - Machine Learning-Based Psychology: Cognitive Decision-Making Study
+   - Behavioral analysis using ML algorithms
+   - Age-group categorized psychology assessment
+
+2. **RCAAI 2022** - Machine Learning for Nutritional Psychology & Fast Food Impact
+   - 98% accuracy in BMI and health predictions
+   - Pre/post-COVID eating pattern analysis

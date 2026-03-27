@@ -131,3 +131,9 @@ Comprehensive research work across multiple conferences and journals:
 2. **RCAAI 2022** - Machine Learning for Nutritional Psychology & Fast Food Impact
    - 98% accuracy in BMI and health predictions
    - Pre/post-COVID eating pattern analysis
+
+### 8. **Resume Section**
+- Embedded PDF preview using Google Drive
+- Direct download link for PDF file
+- Resume image preview
+- Professional document showcase

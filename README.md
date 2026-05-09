@@ -137,3 +137,22 @@ Comprehensive research work across multiple conferences and journals:
 - Direct download link for PDF file
 - Resume image preview
 - Professional document showcase
+
+### 9. **Contact Section**
+- **Location:** Pune, MH, 411028
+- **Email:** wattamwarsoham2000@gmail.com
+- **Phone:** +91 937-062-8823
+- Icon-based contact information display
+- Responsive contact layout
+
+### 10. **Footer Section**
+- Name/Brand display
+- Social media links:
+  - LinkedIn
+  - GitHub
+  - Telegram
+  - Resume PDF
+- Copyright notice
+- Custom credit message
+
+---

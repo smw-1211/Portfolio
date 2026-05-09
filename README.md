@@ -156,3 +156,28 @@ Comprehensive research work across multiple conferences and journals:
 - Custom credit message
 
 ---
+
+## 🛠️ Technologies Used
+
+### Frontend Technologies
+- **HTML5** - Semantic markup
+- **CSS3** - Advanced styling and animations
+- **JavaScript (ES6+)** - Interactive functionality
+- **Bootstrap 5** - Responsive grid system
+
+### Libraries & Frameworks
+- **AOS (Animate On Scroll)** - Scroll animations
+- **Boxicons** - SVG icon library
+- **Bootstrap Icons** - Additional icons
+- **GLightbox** - Lightbox gallery
+- **Isotope Layout** - Filtering and sorting
+- **Swiper** - Touch slider carousel
+- **Typed.js** - Text typing animation
+- **Waypoints** - Scroll triggers
+- **PureCounter** - Number counters
+
+### Development Tools
+- **Git** - Version control
+- **VS Code** - Code editor
+
+---

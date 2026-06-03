@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Soham Manoj Wattamwar Portfolio</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/portfolio/briefcase.png" rel="icon">
+  <link href="assets/img/portfolio/briefcase.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <!-- Preload critical assets -->
+  <link rel="preload" as="image" href="assets/img/cover-bg.jpg">
+
+  <style>
+    /* ===== SCROLL TO TOP BUTTON ===== */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 9999;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #0563bb, #045aaa);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 4px 20px rgba(5, 99, 187, 0.4);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.35s ease, transform 0.35s ease, background 0.2s;
+      pointer-events: none;
+    }
+    #scrollTopBtn.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: all;
+    }
+    #scrollTopBtn:hover {
+      background: linear-gradient(135deg, #0452a0, #034894);
+      box-shadow: 0 6px 28px rgba(5, 99, 187, 0.55);
+    }
+    #scrollTopBtn i { line-height: 1; }
+
+    /* ===== RESEARCH SECTION REDESIGN ===== */
+    .research-hero-banner {
+      background: linear-gradient(135deg, #0563bb 0%, #034894 50%, #022f6e 100%);
+      border-radius: 16px;
+      padding: 40px 36px;
+      margin-bottom: 48px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .research-hero-banner::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .research-hero-banner::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -30px;
+      width: 260px; height: 260px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+    }
+    .research-hero-banner h3 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-bottom: 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .research-hero-banner p {
+      font-size: 1.05rem;
+      opacity: 0.9;
+      margin: 0;
+      max-width: 700px;
+      line-height: 1.7;
+    }
+    .research-publisher-badges {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .pub-badge {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      padding: 5px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #fff;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Research section header styles */
+    #research-combined .section-title h2 {
+      position: relative;
+    }
+
+    /* Publication cards grid */
+    .research-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-top: 8px;
+    }
+    .research-card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #e8edf5;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(5,99,187,0.07);
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    body.dark-mode .research-card {
+      background: #1a2332;
+      border-color: #2a3a52;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+    .research-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(5,99,187,0.16);
+    }
+    .research-card-image {
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      position: relative;
+    }
+    .research-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .research-card:hover .research-card-image img {
+      transform: scale(1.06);
+    }
+    .research-card-image .pub-overlay-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #fff;
+    }
+    .badge-ieee  { background: #0056a0; }
+    .badge-springer { background: #e8490f; }
+    .badge-taylor { background: #6d3a8a; }
+
+    .research-card-body {
+      padding: 22px 22px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .research-card-venue {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0563bb;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    body.dark-mode .research-card-venue { color: #4d9de0; }
+    .research-card-venue i { font-size: 1rem; }
+    .research-card-title {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: #1a2332;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    body.dark-mode .research-card-title { color: #e4eaf4; }
+    .research-card-abstract {
+      font-size: 0.87rem;
+      color: #5a6a80;
+      line-height: 1.65;
+      flex: 1;
+    }
+    body.dark-mode .research-card-abstract { color: #8a9ab5; }
+    .research-card-abstract .abstract-hidden {
+      display: none;
+    }
+    .research-card-abstract .read-toggle {
+      background: none;
+      border: none;
+      color: #0563bb;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      margin-top: 4px;
+      display: block;
+    }
+    body.dark-mode .research-card-abstract .read-toggle { color: #4d9de0; }
+    .research-card-footer {
+      padding: 14px 22px;
+      border-top: 1px solid #e8edf5;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    body.dark-mode .research-card-footer { border-color: #2a3a52; }
+    .research-index-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .index-badge {
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 3px 9px;
+      border-radius: 10px;
+      text-transform: uppercase;
+    }
+    .index-scopus { background: #e8f0fb; color: #0563bb; }
+    .index-wos    { background: #fef3e8; color: #c96500; }
+    body.dark-mode .index-scopus { background: #162040; color: #5aadff; }
+    body.dark-mode .index-wos    { background: #2a1800; color: #ffa055; }
+    .research-card-link {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: #0563bb;
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      flex-shrink: 0;
+    }
+    .research-card-link:hover {
+      background: #034894;
+      transform: scale(1.12);
+      color: #fff;
+    }
+
+    /* ===== AWARDS / CERTIFICATIONS SECTION ===== */
+    #awards {
+      padding: 60px 0;
+    }
+    .awards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 22px;
+      margin-top: 10px;
+    }
+    .award-card {
+      background: #fff;
+      border-radius: 14px;
+      border: 1px solid #e8edf5;
+      padding: 26px 24px;
+      box-shadow: 0 2px 14px rgba(5,99,187,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    body.dark-mode .award-card {
+      background: #1a2332;
+      border-color: #2a3a52;
+    }
+    .award-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 32px rgba(5,99,187,0.14);
+    }
+    .award-icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #e8f0fb, #c8daf8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      color: #0563bb;
+      flex-shrink: 0;
+    }
+    body.dark-mode .award-icon-wrap {
+      background: linear-gradient(135deg, #162040, #0d2a5a);
+    }
+    .award-card-content h5 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #1a2332;
+      margin-bottom: 4px;
+    }
+    body.dark-mode .award-card-content h5 { color: #e4eaf4; }
+    .award-card-content p {
+      font-size: 0.82rem;
+      color: #5a6a80;
+      margin: 0;
+      line-height: 1.5;
+    }
+    body.dark-mode .award-card-content p { color: #8a9ab5; }
+    .award-card-content .award-year {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      color: #0563bb;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    body.dark-mode .award-card-content .award-year { color: #4d9de0; }
+
+    /* ===== DARK MODE FOR HERO BANNER ===== */
+    body.dark-mode .research-hero-banner {
+      background: linear-gradient(135deg, #03326b 0%, #021e45 60%, #010f2a 100%);
+    }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-info-panel {
+      background: #fff;
+      border: 1px solid #e8edf5;
+      border-radius: 16px;
+      padding: 36px 32px;
+      height: 100%;
+      box-shadow: 0 2px 16px rgba(5,99,187,0.07);
+    }
+    body.dark-mode .contact-info-panel {
+      background: #1a2332;
+      border-color: #2a3a52;
+    }
+
+    .contact-availability {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #e8f8f0;
+      border: 1px solid #b2dfcf;
+      border-radius: 20px;
+      padding: 6px 14px;
+      margin-bottom: 20px;
+    }
+    body.dark-mode .contact-availability {
+      background: #0d2a1e;
+      border-color: #1a5c3a;
+    }
+    .avail-dot {
+      width: 9px; height: 9px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 0 3px rgba(34,197,94,0.25);
+      animation: pulse-green 2s infinite;
+      flex-shrink: 0;
+    }
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 0 0 3px rgba(34,197,94,0.25); }
+      50%       { box-shadow: 0 0 0 6px rgba(34,197,94,0.08); }
+    }
+    .avail-text {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #166534;
+      letter-spacing: 0.02em;
+    }
+    body.dark-mode .avail-text { color: #4ade80; }
+
+    .contact-intro {
+      font-size: 0.9rem;
+      color: #5a6a80;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    body.dark-mode .contact-intro { color: #8a9ab5; }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .contact-info-icon {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #e8f0fb, #c8daf8);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      color: #0563bb;
+      flex-shrink: 0;
+    }
+    body.dark-mode .contact-info-icon {
+      background: linear-gradient(135deg, #162040, #0d2a5a);
+    }
+    .contact-info-item h5 {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8a9ab5;
+      margin: 0 0 3px;
+    }
+    .contact-info-item p {
+      font-size: 0.9rem;
+      color: #1a2332;
+      margin: 0;
+    }
+    body.dark-mode .contact-info-item p { color: #e4eaf4; }
+    .contact-info-item p a {
+      color: #1a2332;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    body.dark-mode .contact-info-item p a { color: #e4eaf4; }
+    .contact-info-item p a:hover { color: #0563bb; }
+
+    .contact-socials {
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid #e8edf5;
+    }
+    body.dark-mode .contact-socials { border-color: #2a3a52; }
+    .contact-socials-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #8a9ab5;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .contact-socials-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .contact-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 18px;
+      border-radius: 22px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+    }
+    .contact-social-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+      opacity: 0.92;
+    }
+    .contact-social-btn i { font-size: 1.05rem; }
+    .linkedin-btn { background: #0a66c2; color: #fff; }
+    .github-btn   { background: #24292e; color: #fff; }
+    body.dark-mode .github-btn { background: #3a3f47; }
+
+    /* ===== HERO — updated elements ===== */
+    .hero-code-tag {
+      font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 500;
+      color: #0563bb;
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+    .dark-mode .hero-code-tag { color: #4d9de0; }
+
+    .hero-statement {
+      font-size: clamp(15px, 2.2vw, 22px);
+      color: #45505b;
+      font-weight: 400;
+      line-height: 1.6;
+      margin: 0 0 18px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+    .dark-mode .hero-statement { color: #c0c8d0; }
+
+    @media (max-width: 992px) {
+      .hero-code-tag { font-size: clamp(22px, 6vw, 36px); text-align: center; }
+      .hero-statement { font-size: 15px; text-align: center; }
+    }
+
+    /* ===== ABOUT — TWO-COLUMN LAYOUT ===== */
+    .about-two-col {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 48px;
+      align-items: start;
+    }
+    .about-left { min-width: 0; }
+    .about-right {
+      position: sticky;
+      top: 90px;
+      align-self: start;
+    }
+
+    /* ===== TERMINAL CARD ===== */
+    .terminal-card {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
+      font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+      font-size: 13.5px;
+      line-height: 1.75;
+      background: #1e1e2e;
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .terminal-card:hover {
+      box-shadow: 0 16px 56px rgba(0,0,0,0.28), 0 4px 16px rgba(5,99,187,0.15);
+      transform: translateY(-3px);
+    }
+    .terminal-titlebar {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 12px 16px;
+      background: #2a2a3d;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .tb-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+    .tb-red    { background: #ff5f57; }
+    .tb-yellow { background: #febc2e; }
+    .tb-green  { background: #28c840; }
+    .tb-filename {
+      margin-left: 10px;
+      color: #888aac;
+      font-size: 12px;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      letter-spacing: 0.03em;
+    }
+    .terminal-body { padding: 20px 22px 18px; background: #1e1e2e; }
+    .t-line {
+      margin: 0; padding: 0;
+      white-space: pre-wrap;
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0 4px;
+    }
+    .t-blank  { min-height: 6px; }
+    .t-indent { padding-left: 20px; }
+    .t-comment { color: #6272a4; font-style: italic; }
+    .t-key     { color: #cba6f7; }
+    .t-str     { color: #a6e3a1; }
+    .t-bool    { color: #fab387; }
+    .t-arr     { color: #89dceb; }
+    .t-punct   { color: #cdd6f4; }
+    .t-label   { color: #89b4fa; }
+    .t-link {
+      color: #f38ba8;
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(243,139,168,0.45);
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .t-link:hover { color: #ff9eb3; border-bottom-color: #ff9eb3; }
+    .t-cursor-line { margin-top: 6px; }
+    .t-prompt { color: #a6e3a1; margin-right: 6px; }
+    .t-cursor {
+      color: #cdd6f4;
+      animation: termBlink 1.1s step-end infinite;
+    }
+    @keyframes termBlink { 0%,100%{opacity:1} 50%{opacity:0} }
+
+    @media (max-width: 1100px) {
+      .about-two-col { grid-template-columns: 1fr 360px; gap: 32px; }
+    }
+    @media (max-width: 900px) {
+      .about-two-col { grid-template-columns: 1fr; gap: 36px; }
+      .about-right   { position: static; }
+      .terminal-card { font-size: 13px; }
+    }
+
+    /* Contact form panel */
+    .contact-form-panel {
+      background: #fff;
+      border: 1px solid #e8edf5;
+      border-radius: 16px;
+      padding: 36px 32px;
+      height: 100%;
+      box-shadow: 0 2px 16px rgba(5,99,187,0.07);
+    }
+    body.dark-mode .contact-form-panel {
+      background: #1a2332;
+      border-color: #2a3a52;
+    }
+
+    .contact-field { display: flex; flex-direction: column; }
+    .contact-field label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #5a6a80;
+      margin-bottom: 7px;
+    }
+    body.dark-mode .contact-field label { color: #8a9ab5; }
+    .contact-field input,
+    .contact-field textarea {
+      border: 1.5px solid #dde4f0;
+      border-radius: 9px;
+      padding: 11px 14px;
+      font-size: 0.9rem;
+      color: #1a2332;
+      background: #f8faff;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      font-family: inherit;
+      resize: vertical;
+    }
+    body.dark-mode .contact-field input,
+    body.dark-mode .contact-field textarea {
+      background: #0f1c2e;
+      border-color: #2a3a52;
+      color: #e4eaf4;
+    }
+    .contact-field input:focus,
+    .contact-field textarea:focus {
+      border-color: #0563bb;
+      box-shadow: 0 0 0 3px rgba(5,99,187,0.12);
+      background: #fff;
+    }
+    body.dark-mode .contact-field input:focus,
+    body.dark-mode .contact-field textarea:focus {
+      background: #132035;
+    }
+    .contact-field input.invalid,
+    .contact-field textarea.invalid {
+      border-color: #e53e3e;
+      box-shadow: 0 0 0 3px rgba(229,62,62,0.1);
+    }
+    .field-error {
+      font-size: 0.75rem;
+      color: #e53e3e;
+      margin-top: 4px;
+      display: none;
+    }
+    .field-error.visible { display: block; }
+
+    .contact-submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      background: linear-gradient(135deg, #0563bb, #045aaa);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 13px 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+      font-family: inherit;
+    }
+    .contact-submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(5,99,187,0.35);
+    }
+    .contact-submit-btn:disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .contact-form-feedback {
+      display: inline-block;
+      margin-left: 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      vertical-align: middle;
+    }
+    .contact-form-feedback.success { color: #22c55e; }
+    .contact-form-feedback.error   { color: #e53e3e; }
+  </style>
+</head>
+
+<body>
+  <!-- Top Navigation Bar -->
+  <nav id="navbar" class="navbar nav-menu sticky-top">
+    <div class="nav-container">
+      <ul class="nav-menu-list">
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#skills" class="nav-link scrollto"><i class="bi bi-laptop"></i> <span>Skills</span></a></li>
+        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+        <li><a href="#research-combined" class="nav-link scrollto"><i class='bx bxs-registered'></i> <span>Research</span></a></li>
+        <li><a href="#awards" class="nav-link scrollto"><i class="bx bx-award"></i> <span>Awards</span></a></li>
+        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>   
+        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+      <button class="theme-toggle-btn" onclick="myFunction()" title="Toggle Dark Mode">
+        <i class="bi bi-brightness-high"></i>
+      </button>
+    </div>
+  </nav>
+
+  <header id="header" class="d-flex flex-column justify-content-center">
+  </header>
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex flex-column justify-content-center">
+      <div class="container container-hero" data-aos="zoom-in" data-aos-delay="100">
+        <div class="hero-code-tag">&lt; SDE-II /&gt;</div>
+        <p class="hero-statement">I build scalable systems, ship clean code,<br>and explore the realms of AI.</p>
+        <p><span class="typed" data-typed-items="AI/ML Enthusiast, Software Engineer, Data Science Researcher, Fullstack Developer, Technogeek"></span></p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/wattamwarsoham/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/smw-1211" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="about-two-col">
+
+          <!-- LEFT COLUMN -->
+          <div class="about-left" data-aos="fade-right">
+            <div class="about-image-wrapper">
+              <img src="assets/img/portfolio/portfolio-image-1.png" class="img-fluid" alt="Profile Picture">
+            </div>
+
+            <div class="about-intro">
+              <h3>Hey there, I'm Soham Manoj Wattamwar</h3>
+              <p class="about-location"><i class="bi bi-geo-alt-fill"></i> Pune, Maharashtra</p>
+            </div>
+
+            <div class="about-description">
+              <p class="about-highlight">
+                I'm an experienced developer and technogeek passionate about staying updated with cutting-edge technology and building scalable, high-quality software solutions.
+              </p>
+
+              <div class="about-expertise">
+                <h4>Technical Expertise</h4>
+                <ul class="expertise-list">
+                  <li><strong>AI/ML &amp; Computer Vision:</strong> Gen AI, Python, TensorFlow, Keras, OpenCV</li>
+                  <li><strong>Fullstack Development:</strong> React, .NET, Java, JavaScript</li>
+                  <li><strong>Languages:</strong> JavaScript, Python, C++, Java, HTML5, CSS3</li>
+                  <li><strong>Professional Experience:</strong> UST (Developer - Software engg.), CDAC (NLP Project Intern), Blackcoffer (Web Dev Intern)</li>
+                </ul>
+              </div>
+
+              <div class="about-passion">
+                <h4>What Drives Me</h4>
+                <p>I'm deeply passionate about constructing scalable systems, contributing to high-quality code, and solving challenging computer science problems through:</p>
+                <ul class="passion-list">
+                  <li><i class="bi bi-puzzle"></i> Machine Learning &amp; Computer Vision</li>
+                  <li><i class="bi bi-lightning"></i> Fullstack Development</li>
+                  <li><i class="bi bi-book"></i> Research &amp; Innovation</li>
+                </ul>
+              </div>
+
+              <div class="about-interests">
+                <h4>When I'm Not Working, You'll likely find me:</h4>
+                <!-- <p>You'll likely find me:</p> -->
+                <div class="interests-grid">
+                  <div class="interest-item">
+                    <i class="bi bi-play-btn"></i>
+                    <span>Watching tech talks, tutorials or reading blogs</span>
+                  </div>
+                  <div class="interest-item">
+                    <i class="bi bi-trophy"></i>
+                    <span>Playing Table Tennis or Chess</span>
+                  </div>
+                  <div class="interest-item">
+                    <i class="bi bi-calculator"></i>
+                    <span>Practicing Abacus</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN — sticky terminal card -->
+          <div class="about-right" data-aos="fade-left" data-aos-delay="100">
+            <div class="terminal-card">
+              <div class="terminal-titlebar">
+                <span class="tb-dot tb-red"></span>
+                <span class="tb-dot tb-yellow"></span>
+                <span class="tb-dot tb-green"></span>
+                <span class="tb-filename">I, me & myself.md</span>
+              </div>
+              <div class="terminal-body">
+                <p class="t-line"><span class="t-comment"># Hello World 👋</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-key">name</span><span class="t-punct">:</span> <span class="t-str">"Soham Manoj Wattamwar"</span></p>
+                <p class="t-line"><span class="t-key">role</span><span class="t-punct">:</span> <span class="t-str">"SDE-II @ UST"</span></p>
+                <p class="t-line"><span class="t-key">location</span><span class="t-punct">:</span> <span class="t-str">"Pune, Maharashtra 📍"</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-comment"># 🙋‍♂️ About Me</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-label">🔭 currently</span><span class="t-punct">:</span></p>
+                <p class="t-line t-indent"><span class="t-str">"Building scalable systems @ UST as SDE-II"</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-label">🌱 learning</span><span class="t-punct">:</span> <span class="t-arr">[</span></p>
+                <p class="t-line t-indent"><span class="t-str">"Golang"</span><span class="t-punct">,</span> <span class="t-str">"ASP.Net Core"</span><span class="t-punct">,</span> <span class="t-str">"gRPC"</span></p>
+                <p class="t-line"><span class="t-arr">]</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-label">👯 open_source</span><span class="t-punct">:</span> <span class="t-bool">true</span></p>
+                <p class="t-line"><span class="t-label">🤝 looking_for</span><span class="t-punct">:</span> <span class="t-str">"collabs &amp; contributions"</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-label">💬 talk_to_me_about</span><span class="t-punct">:</span> <span class="t-arr">[</span></p>
+                <p class="t-line t-indent"><span class="t-str">"AI/ML"</span><span class="t-punct">,</span> <span class="t-str">"Fullstack"</span><span class="t-punct">,</span> <span class="t-str">"Computer Vision"</span></p>
+                <p class="t-line"><span class="t-arr">]</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-comment"># 📬 Reach Me</span></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-label">📧 email</span><span class="t-punct">:</span></p>
+                <p class="t-line t-indent"><a href="mailto:wattamwarsoham2000@gmail.com" class="t-link">wattamwarsoham2000@gmail.com</a></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-line"><span class="t-label">👨‍💻 projects</span><span class="t-punct">:</span></p>
+                <p class="t-line t-indent"><a href="https://www.github.com/smw-1211" target="_blank" class="t-link">github.com/smw-1211</a></p>
+                <p class="t-line t-blank">&nbsp;</p>
+                <p class="t-cursor-line t-line"><span class="t-prompt">$</span> <span class="t-cursor">█</span></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Full-width CTA banner -->
+        <div class="about-cta" style="margin-top: 36px;">
+          <p class="closing-message">
+            Welcome to my portfolio, where innovation and a genuine passion for technology come together to define my journey.
+            <br>
+            <strong>Let's create something amazing together!</strong>
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- ======= Facts Section ======= -->
+    <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Facts</h2>
+          <p>With years of hands-on experience, I have consistently demonstrated initiative by engineering solutions to real-world problems, contributing to impactful projects, and sharing expertise through published insights. My work has been recognized with professional accolades, reflecting a sustained commitment to technical excellence, continuous learning, and delivering lasting value across teams and organizations.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="count-box">
+              <i class="bi bi-emoji-smile"></i>
+              <div style="display: flex;">
+                <span style="margin-left: 20px;" data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+                <span class="facts-symbol">+</span>  
+              </div>
+              <p class="purecounter-clients">Work Experience</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class="bi bi-journal-richtext"></i>
+              <div style="display: flex;">
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <span class="facts-symbol">+</span>  
+              </div>
+              <p class="purecounter-clients">Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class='bx bx-book-open'></i>
+              <div style="display: flex;">
+                <span style="margin-left: 20px;" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+                <span class="facts-symbol">+</span>  
+              </div>
+              <p class="purecounter-clients">Publications</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class="bi bi-award"></i>
+              <span style="margin-left: 60px;" data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1" class="purecounter"></span>
+              <p class="purecounter-clients">Corporate Awards</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Facts Section -->    
+
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Skills</h2>
+          <p>Proficiency in a diverse range of technologies spanning frontend, backend, AI/ML, and data science domains.</p>
+        </div>
+
+        <!-- Skills Icons Grid -->
+        <div class="skills-icons-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="skill-icon-item" data-tooltip="Gen AI, Neural networks">
+            <i class="bx bx-brain"></i>
+            <p>AI/ML</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="Keras & Tensorflow">
+            <i class="bx bx-comment-detail"></i>
+            <p>NLP</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="HTML5, CSS3 & Javascript">
+            <i class="bx bxl-html5"></i>
+            <p>Web Foundation</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="Node.js, Express">
+            <i class="bx bxl-nodejs"></i>
+            <p>Backend</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="React JS, Next Js, Angular">
+            <i class="bx bxl-react"></i>
+            <p>Frontend</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="ASP.NET Core, Entity Framework">
+            <i class="bx bxl-microsoft"></i>
+            <p>.NET Stack</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="Python, Numpy, Pandas, Scikit-learn, Streamlit, Hugging face">
+            <i class="bx bxl-python"></i>
+            <p>Data Science</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="C++">
+            <i class="bx bxl-c-plus-plus"></i>
+            <p>Systems</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="Java & SpringBoot">
+            <i class="bx bxl-java"></i>
+            <p>Enterprise</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="Jest, Cypress, JUnit">
+            <i class="bx bx-check-double"></i>
+            <p>Testing</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="CI/CD, K8s, Harness, Jenkins, Github Actions">
+            <i class="bx bx-cog"></i>
+            <p>DevOps</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="MySQL, MongoDB, PostgreSQL, Firebase">
+            <i class="bx bx-data"></i>
+            <p>Databases</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="Lambda, API Gateway, S3, ECS, RDS, Cloudfront, VPC, IAM, Secret Manager, Cloudwatch">
+            <i class="bx bx-server"></i>
+            <p>AWS</p>
+          </div>
+          <div class="skill-icon-item" data-tooltip="WCAG, ADA, Storybook, Cross-platform, Atomicity, Theming">
+            <i class="bx bx-laptop"></i>
+            <p>Web</p>
+          </div>
+        </div>
+
+        <!-- Skills Bars -->
+        <div class="skills-content" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bx-brain"></i>
+                <span class="skill">AI/ML</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bx-comment-detail"></i>
+                <span class="skill">NLP</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-html5"></i>
+                <span class="skill">Html5, Css3 & Js</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-python"></i>
+                <span class="skill">Python</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-c-plus-plus"></i>
+                <span class="skill">C++</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-java"></i>
+                <span class="skill">Java & SpringBoot</span>
+                <span class="skill-percentage">45%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-nodejs"></i>
+                <span class="skill">Node Js</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-react"></i>
+                <span class="skill">React JS</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 95%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bxl-microsoft"></i>
+                <span class="skill">Asp.Net</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-header">
+                <i class="bx bx-check-double"></i>
+                <span class="skill">Junit</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%"></div>
+              </div>
+            </div>
+
+        </div>
+
+      </div>
+    </section>
+    <!-- End Skills Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Projects</h2>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+          <ul id="portfolio-flters" class="portfolio-filters">
+            <li data-filter="*" class="filter-active active">All</li>
+            <li data-filter=".react" class="filter-active">React Js</li>
+            <li data-filter=".ai" class="filter-active">AI/ML</li>
+            <li data-filter=".frontend" class="filter-active">Core Frontend</li>
+            <li data-filter=".backend" class="filter-active">Core backend</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app frontend">
+          <div class="project-item react portfolio-wrap">
+            <img src="assets/img/portfolio/food-website-bckgrnd.jpeg" class="img-fluid" alt="Foodify website using React">
+            <div class="portfolio-info">
+              <h4>Foodify Website</h4>
+              <p>Static ready-to-use webpges for food website.</p>
+              <div class="tech-stack">
+                <span class="tech-badge react">React</span>
+                <span class="tech-badge js">JavaScript</span>
+                <span class="tech-badge html">HTML5</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/foodblog" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web ai">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/data-analysis.jpg" class="img-fluid" alt="Explore about Data Analysis with Python - Data Science based project">
+            <div class="portfolio-info">
+              <h4>Data Analysis Projects</h4>
+              <p>Peforming data analysis on comapny's data.</p>
+              <div class="tech-stack">
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge ai">Data Science</span>
+                <span class="tech-badge sql">SQL</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Data-Analysis-Projects" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card frontend">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/landingpage.JPG" class="img-fluid" alt="Landing Site for fitness category using Html5, Css3 and Js">
+            <div class="portfolio-info">
+              <h4>Fitness Fusion - Where fitness meets you</h4>
+              <p>A starter template of landingpage for fitness sites.</p>
+              <div class="tech-stack">
+                <span class="tech-badge frontend">Frontend</span>
+                <span class="tech-badge html">HTML5</span>
+                <span class="tech-badge js">JavaScript</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/landingpage" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web ai">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/opencv-fundamentals.jpg" class="img-fluid" alt="Understand basics of OpenCV using AI/ML or Python - Data Science">
+            <div class="portfolio-info">
+              <h4>Open CV Primer</h4>
+              <p>A platform for beginners to delve into computer vision.</p>
+              <div class="tech-stack">
+                <span class="tech-badge ai">Computer Vision</span>
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge ai">OpenCV</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/OpenCV-Fundamentals" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web react">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/hangman.jpg" class="img-fluid" alt="Project using - Html5, Css3 and Js">
+            <div class="portfolio-info">
+              <h4>Hangman</h4>
+              <p>Decode name of the programming language.</p>
+              <div class="tech-stack">
+                <span class="tech-badge frontend">Frontend</span>
+                <span class="tech-badge html">HTML5</span>
+                <span class="tech-badge js">JavaScript</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Hangman" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-app backend">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/api-digit-recognizer.png" class="img-fluid" alt="A CNN based AI/ML project to identify digits.">
+            <div class="portfolio-info">
+              <h4>API-Digit Recognizer</h4>
+              <p>A CNN model deprived python django project to identify the digits.</p>
+              <div class="tech-stack">
+                <span class="tech-badge django">Django</span>
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge ai">TensorFlow</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Django-API-Digit-Recognizer" target="_blank"><i class="bx bx-link"></i></a>                  
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card ai">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/hate-speech.png" class="img-fluid" alt="Hate Speech detection using Python - Data Science or AI/ML.">
+            <div class="portfolio-info">
+              <h4>Hate Speech Detection</h4>
+              <p>Developed a hate speech identifier using LSTM.</p>
+              <div class="tech-stack">
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge ai">LSTM</span>
+                <span class="tech-badge ai">NLP</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Hate-Speech" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card react">
+          <div class="project-item portfolio-wrap">
+            <img src="./assets/img/portfolio/wpm.png" class="img-fluid" alt="Platform to test your typing speed built using Html5, Css3 and Js">
+            <div class="portfolio-info">
+              <h4>Words Per Minute</h4>
+              <p>A platform to evaluate the typing proficiency</p>
+              <div class="tech-stack">
+                <span class="tech-badge frontend">Frontend</span>
+                <span class="tech-badge html">HTML5</span>
+                <span class="tech-badge js">JavaScript</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/WPM" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card ai">
+          <div class="project-item portfolio-wrap">
+            <img src="./assets/img/portfolio/malware-detection.jpg" class="img-fluid" alt="AI/ML based project to detect malware/fraud.">
+            <div class="portfolio-info">
+              <h4>Malware Detection using ML</h4>
+              <p>A robust technique to detect malware using Random Forest Classifier.</p>
+              <div class="tech-stack">
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge ai">Scikit-Learn</span>
+                <span class="tech-badge ai">ML</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Unmasking-Malware" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card backend">
+          <div class="project-item portfolio-wrap">
+            <img src="./assets/img/portfolio/weather-prediction.png" class="img-fluid" alt="Python - Data Science project to determine weather.">
+            <div class="portfolio-info">
+              <h4>Weather Forge</h4>
+              <p>A model that determines weather using django.</p>
+              <div class="tech-stack">
+                <span class="tech-badge django">Django</span>
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge backend">Backend</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/SkySculpt-WeatherForge" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card react">
+          <div class="project-item react portfolio-wrap">
+            <img src="./assets/img/portfolio/pagination-products.jpg" class="img-fluid" alt="products-listed-using-pagination using React">
+            <div class="portfolio-info">
+              <h4>React-Paginate-Deck</h4>
+              <p>Listed products of an api using pagination in react.</p>
+              <div class="tech-stack">
+                <span class="tech-badge react">React</span>
+                <span class="tech-badge js">JavaScript</span>
+                <span class="tech-badge frontend">Frontend</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/pagination" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-card ai">
+          <div class="project-item react portfolio-wrap">
+            <img src="assets/img/portfolio/polynomial.png" class="img-fluid" alt="Understand Polynomial Regression using Python - Data Science.">
+            <div class="portfolio-info">
+              <h4>PolyFit Insights: Predictive Regression Analysis</h4>
+              <p>Advanced polynomial regression for accurate predictive modeling and analysis.</p>
+              <div class="tech-stack">
+                <span class="tech-badge python">Python</span>
+                <span class="tech-badge ai">Data Science</span>
+                <span class="tech-badge ai">Scikit-Learn</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Polynomial-Regression" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web react">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/youtube-search.png" class="img-fluid" alt="Project using - Html5, Css3 and Js">
+            <div class="portfolio-info">
+              <h4>SearchSphere</h4>
+              <p>Analyzing Youtube Video Search.</p>
+              <div class="tech-stack">
+                <span class="tech-badge react">React</span>
+                <span class="tech-badge js">JavaScript</span>
+                <span class="tech-badge frontend">Frontend</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/Miniproj" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web backend">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/sql-study.png" class="img-fluid" alt="Learn basics of sql.">
+            <div class="portfolio-info">
+              <h4>SqlAliases</h4>
+              <p>Explore in depth about SQL.</p>
+              <div class="tech-stack">
+                <span class="tech-badge sql">SQL</span>
+                <span class="tech-badge backend">Database</span>
+                <span class="tech-badge frontend">Frontend</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/SqlAliases" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web react">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/react-auth.png" class="img-fluid" alt="Learn basics of sql.">
+            <div class="portfolio-info">
+              <h4>React Auth-Verify</h4>
+              <p>Secure user authentication and verification.</p>
+              <div class="tech-stack">
+                <span class="tech-badge react">React</span>
+                <span class="tech-badge js">JavaScript</span>
+                <span class="tech-badge frontend">Auth</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/ReactAuthVerify" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web react">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/datepicker.png" class="img-fluid" alt="Project using - Html5, Css3 and Js">
+            <div class="portfolio-info">
+              <h4>React-Datepicker</h4>
+              <p>A versatile reusable component.</p>
+              <div class="tech-stack">
+                <span class="tech-badge react">React</span>
+                <span class="tech-badge js">JavaScript</span>
+                <span class="tech-badge frontend">Component</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/DatePicker" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item filter-web frontend">
+          <div class="project-item portfolio-wrap">
+            <img src="assets/img/portfolio/react-admin-dashboard.png" class="img-fluid" alt="Project using - Html5, Css3 and Js">
+            <div class="portfolio-info">
+              <h4>Adminhub: React-Dashboard</h4>
+              <p>Admin panel dashboard template.</p>
+              <div class="tech-stack">
+                <span class="tech-badge react">React</span>
+                <span class="tech-badge frontend">Frontend</span>
+                <span class="tech-badge js">JavaScript</span>
+              </div>
+              <div class="portfolio-links">
+                <a href="https://github.com/smw-1211/React-Dashboard" target="_blank"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- End Projects Section -->
+
+    <!-- ======= Research Publications Section (COMBINED & REDESIGNED) ======= -->
+    <section id="research-combined" class="portfolio section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Research Publications</h2>
+          <p>Peer-reviewed contributions to IEEE, Springer, and Taylor &amp; Francis — spanning computer vision, machine learning, and behavioral analytics.</p>
+        </div>
+
+        <!-- Hero banner -->
+        <div class="research-hero-banner" data-aos="fade-up" data-aos-delay="100">
+          <h3>Academic Contributions</h3>
+          <p>
+            During my bachelor's in Computer Science &amp; Engineering, I had the privilege of contributing to research published in reputed journals and prominent conferences under the guidance of PhD-holding professors.
+          </p>
+          <div class="research-publisher-badges">
+            <span class="pub-badge">Taylor &amp; Francis</span>
+            <span class="pub-badge">IEEE</span>
+            <span class="pub-badge">Springer</span>
+            <span class="pub-badge">Scopus Indexed</span>
+            <span class="pub-badge">Web of Science</span>
+          </div>
+        </div>
+
+        <!-- Publication Cards Grid -->
+        <div class="research-cards-grid" data-aos="fade-up" data-aos-delay="150">
+
+          <!-- Paper 1: Taylor & Francis -->
+          <div class="research-card">
+            <div class="research-card-image">
+              <img src="assets/img/portfolio/research-01.png" alt="Taylor & Francis Publication">
+              <span class="pub-overlay-badge badge-taylor">Taylor &amp; Francis</span>
+            </div>
+            <div class="research-card-body">
+              <div class="research-card-venue">
+                <i class="bx bx-book-bookmark"></i> Book Chapter · 2022
+              </div>
+              <div class="research-card-title">
+                Analytical Study on Consumer Social and Behavioral Psychology and Its Influence on Online Purchasing
+              </div>
+              <div class="research-card-abstract">
+                Investigated online shopping behaviors using data from purchases and website visits to understand consumer decision-making. Focused on key moments in the purchase journey and how personality traits influence buying choices, with insights drawn from real-world data analysis.
+              </div>
+            </div>
+            <div class="research-card-footer">
+              <div class="research-index-badges">
+                <span class="index-badge index-scopus">Scopus</span>
+              </div>
+              <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9781003305170-4/analytical-study-consumer-social-behavioral-psychology-influence-online-purchasing-parth-rainchwar-rishikesh-mate-soham-wattamwar-aditya-gaisamudre-pratyush-jha-shilpa-sonawani" target="_blank" class="research-card-link" title="View Publication">
+                <i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 2: IEEE SMARTGEN -->
+          <div class="research-card">
+            <div class="research-card-image">
+              <img src="assets/img/portfolio/research-02.jpg" alt="IEEE SMARTGENCON Publication">
+              <span class="pub-overlay-badge badge-ieee">IEEE</span>
+            </div>
+            <div class="research-card-body">
+              <div class="research-card-venue">
+                <i class="bx bx-microchip"></i> IEEE SMARTGENCON · 2021
+              </div>
+              <div class="research-card-title">
+                Optimal Face Recognition System using Haar Classifier
+              </div>
+              <div class="research-card-abstract">
+                Proposed a hybrid face recognition pipeline combining Haar Cascades and LBPH Face Recognizer for a smart voting authentication system — achieving <strong>96% accuracy</strong>. Addresses identity verification gaps in EVM-based elections using OpenCV.
+              </div>
+            </div>
+            <div class="research-card-footer">
+              <div class="research-index-badges">
+                <span class="index-badge index-scopus">Scopus</span>
+                <span class="index-badge index-wos">Web of Science</span>
+              </div>
+              <a href="https://ieeexplore.ieee.org/abstract/document/9645879" target="_blank" class="research-card-link" title="View on IEEE Xplore">
+                <i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 3: IEEE GCAT -->
+          <div class="research-card">
+            <div class="research-card-image">
+              <img src="assets/img/portfolio/research-03.jpg" alt="IEEE GCAT Publication">
+              <span class="pub-overlay-badge badge-ieee">IEEE</span>
+            </div>
+            <div class="research-card-body">
+              <div class="research-card-venue">
+                <i class="bx bx-microchip"></i> IEEE GCAT · 2021
+              </div>
+              <div class="research-card-title">
+                Leveraging Market Sentiment for Stock Price Prediction using GAN
+              </div>
+              <div class="research-card-abstract">
+                Proposed a state-of-the-art GAN architecture combining Naive Bayes sentiment analysis of financial news with an LSTM generator and MLP discriminator to forecast stock prices — integrating both textual and numerical financial signals.
+              </div>
+            </div>
+            <div class="research-card-footer">
+              <div class="research-index-badges">
+                <span class="index-badge index-scopus">Scopus</span>
+                <span class="index-badge index-wos">Web of Science</span>
+              </div>
+              <a href="https://ieeexplore.ieee.org/document/9587497" target="_blank" class="research-card-link" title="View on IEEE Xplore">
+                <i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 4: Springer IACC -->
+          <div class="research-card">
+            <div class="research-card-image">
+              <img src="assets/img/portfolio/research-04.jpg" alt="Springer IACC Publication">
+              <span class="pub-overlay-badge badge-springer">Springer</span>
+            </div>
+            <div class="research-card-body">
+              <div class="research-card-venue">
+                <i class="bx bx-dna"></i> Springer IACC · 2021
+              </div>
+              <div class="research-card-title">
+                Machine Learning-Based Psychology: A Study to Understand Cognitive Decision-Making
+              </div>
+              <div class="research-card-abstract">
+                Applied ML algorithms to analyze how individuals across youth, adult, and millennial age groups respond to category-based psychological questions, revealing behavioral patterns and cognitive decision-making differences.
+              </div>
+            </div>
+            <div class="research-card-footer">
+              <div class="research-index-badges">
+                <span class="index-badge index-scopus">Scopus</span>
+              </div>
+              <a href="https://link.springer.com/chapter/10.1007/978-3-030-95502-1_14" target="_blank" class="research-card-link" title="View on Springer">
+                <i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Paper 5: Springer RCAAI -->
+          <div class="research-card">
+            <div class="research-card-image">
+              <img src="assets/img/portfolio/research-05.jpg" alt="Springer RCAAI Publication">
+              <span class="pub-overlay-badge badge-springer">Springer</span>
+            </div>
+            <div class="research-card-body">
+              <div class="research-card-venue">
+                <i class="bx bx-dna"></i> Springer RCAAI · 2022
+              </div>
+              <div class="research-card-title">
+                Machine Learning for Prediction of Nutritional Psychology, Fast Food Consumption and Its Impact on Students
+              </div>
+              <div class="research-card-abstract">
+                A novel nutrition-based analysis using association, classification, and regression ML models to predict BMI, sickness, and eating patterns — achieving <strong>98% accuracy</strong> and outperforming traditional statistical approaches.
+              </div>
+            </div>
+            <div class="research-card-footer">
+              <div class="research-index-badges">
+                <span class="index-badge index-scopus">Scopus</span>
+                <span class="index-badge index-wos">Web of Science</span>
+              </div>
+              <a href="https://link.springer.com/chapter/10.1007/978-981-99-4634-1_80" target="_blank" class="research-card-link" title="View on Springer">
+                <i class="bx bx-link-external"></i>
+              </a>
+            </div>
+          </div>
+
+        <!-- Paper 6: IJRAR -->
+        <div class="research-card">
+            <div class="research-card-image">
+                <img src="assets/img/portfolio/research-06.png" alt="IJRAR Publication">
+                <span class="pub-overlay-badge badge-springer">IJRAR</span>
+            </div>
+            <div class="research-card-body">
+                <div class="research-card-venue">
+                <i class="bx bx-dna"></i> IJRAR · 2022
+                </div>
+                <div class="research-card-title">
+                Evaluation of Different OTT Platforms with Data Analytics Techniques for Recommending Personalized Content to the Users
+                </div>
+                <div class="research-card-abstract">
+                    We discuss movie recommender systems and its techniques and try to analyze the in-depth problem of why some movies get more fame and what all the factors responsible for a movie or a web-series to gainer recognition by performing Exploratory data analysis and visualizing the pre-processed using Tableau tool which is widely used in this domain.  
+                </div>
+            </div>
+            <div class="research-card-footer">
+                <div class="research-index-badges">
+                <span class="index-badge index-scopus">IJRAR</span>
+                <span class="index-badge index-wos">Open Access, Peer reviewed journal</span>
+                </div>
+                <a href="https://www.ijrar.org/papers/IJRAR1CNP012.pdf" target="_blank" class="research-card-link" title="Link to the publication">
+                <i class="bx bx-link-external"></i>
+                </a>
+            </div>
+        </div>
+            
+        </div><!-- end research-cards-grid -->
+      </div>
+    </section>
+    <!-- End Research Publications Section -->
+
+    <!-- ======= Awards & Certifications Section (NEW) ======= -->
+    <section id="awards" class="section-bg">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Awards &amp; Recognition</h2>
+          <p>Milestones that reflect commitment to excellence — from corporate recognitions to academic achievements.</p>
+        </div>
+        <div class="awards-grid" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="award-card">
+            <div class="award-icon-wrap"><i class="bi bi-trophy-fill"></i></div>
+            <div class="award-card-content">
+              <h5>Corporate Excellence Award</h5>
+              <p>Recognized at UST for outstanding delivery on a high-impact fullstack project under tight timelines.</p>
+              <span class="award-year">UST · 2023</span>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon-wrap"><i class="bi bi-star-fill"></i></div>
+            <div class="award-card-content">
+              <h5>Best Team Contributor</h5>
+              <p>Acknowledged for cross-functional collaboration and consistent knowledge sharing within the engineering team.</p>
+              <span class="award-year">UST · 2024</span>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon-wrap"><i class="bx bx-book-open"></i></div>
+            <div class="award-card-content">
+              <h5>Research Excellence</h5>
+              <p>5+ peer-reviewed papers published in IEEE, Springer &amp; Taylor &amp; Francis during undergraduate studies.</p>
+              <span class="award-year">2021–2022</span>
+            </div>
+          </div>
+
+          <div class="award-card">
+            <div class="award-icon-wrap"><i class="bi bi-patch-check-fill"></i></div>
+            <div class="award-card-content">
+              <h5>Innovation Recognition</h5>
+              <p>Honored for developing a novel ML pipeline for sentiment-driven stock forecasting at an IEEE conference.</p>
+              <span class="award-year">IEEE GCAT · 2021</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Awards Section -->
+      
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Resume</h2>
+          <!-- Embed resume PDF below the link -->
+          <div style="height: 400px;">
+            <iframe 
+              src="https://drive.google.com/file/d/1KeDEN3XS7BEEPWCjDmkAjOVThPUWEJT_/preview" 
+              width="100%" 
+              height="100%" 
+              allow="autoplay">
+            </iframe>
+          </div>
+          <img src="assets/img/resume-img.jpg" class="img-fluid" alt="">
+          <p><a href="https://drive.google.com/file/d/1KeDEN3XS7BEEPWCjDmkAjOVThPUWEJT_/view?usp=sharing" target="_blank" download>Download PDF</a></p>      
+        </div>
+      </div>
+    </section>
+    <!-- End Resume Section -->
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Have a project in mind or just want to say hi? I'd love to hear from you.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <!-- LEFT: Info panel -->
+          <div class="col-lg-5" data-aos="fade-right" data-aos-delay="100">
+            <div class="contact-info-panel">
+
+              <!-- Availability badge -->
+              <div class="contact-availability">
+                <span class="avail-dot"></span>
+                <span class="avail-text">Open to opportunities &amp; collaborations</span>
+              </div>
+
+              <p class="contact-intro">
+                Whether it's a full-time role, freelance project, or research collaboration — feel free to reach out. I typically respond within 24 hours.
+              </p>
+
+              <!-- Info items -->
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <h5>Location</h5>
+                  <p>Pune, Maharashtra, 411028</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-envelope-fill"></i></div>
+                <div>
+                  <h5>Email</h5>
+                  <p><a href="mailto:wattamwarsoham2000@gmail.com">wattamwarsoham2000@gmail.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-info-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <h5>Phone</h5>
+                  <p><a href="tel:+919370628823">+91 937-062-8823</a></p>
+                </div>
+              </div>
+
+              <!-- Social links -->
+              <div class="contact-socials">
+                <span class="contact-socials-label">Find me on</span>
+                <div class="contact-socials-row">
+                  <a href="https://www.linkedin.com/in/wattamwarsoham/" target="_blank" class="contact-social-btn linkedin-btn" title="LinkedIn">
+                    <i class="bx bxl-linkedin"></i> LinkedIn
+                  </a>
+                  <a href="https://github.com/smw-1211" target="_blank" class="contact-social-btn github-btn" title="GitHub">
+                    <i class="bx bxl-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: Contact form -->
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="150">
+            <div class="contact-form-panel">
+              <form id="contactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="contact-field">
+                      <label for="cf-name">Your Name</label>
+                      <input type="text" id="cf-name" placeholder="Soham Wattamwar" required>
+                      <span class="field-error" id="err-name">Please enter your name.</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="contact-field">
+                      <label for="cf-email">Email Address</label>
+                      <input type="email" id="cf-email" placeholder="you@example.com" required>
+                      <span class="field-error" id="err-email">Please enter a valid email.</span>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="contact-field">
+                      <label for="cf-subject">Subject</label>
+                      <input type="text" id="cf-subject" placeholder="Let's collaborate on…" required>
+                      <span class="field-error" id="err-subject">Please enter a subject.</span>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="contact-field">
+                      <label for="cf-message">Message</label>
+                      <textarea id="cf-message" rows="5" placeholder="Tell me about your project, idea, or just say hello…" required></textarea>
+                      <span class="field-error" id="err-message">Please enter a message.</span>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="contact-submit-btn" id="cf-submit">
+                      <i class="bi bi-send-fill"></i>
+                      <span>Send Message</span>
+                    </button>
+                    <div class="contact-form-feedback" id="cf-feedback"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+    
+    </main>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <h3>Soham Wattamwar</h3>
+      
+        <div class="social-links">
+          <a href="https://in.linkedin.com/in/soham-wattamwar-9b790119a" class="linkedin" title="My linkedin profile" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://github.com/smw-1211" class="github" title="Github" target="_blank" ><i class="bx bxl-github"></i></a>
+          <a href="" class="telegram" title="Telegram" target="_blank" ><i class="bx bxl-telegram"></i></a>
+          <a href="" class="resume" title="My Resume" target="_blank" ><i class="bx bxs-file-pdf"></i></a>
+        </div>
+        <div class="copyright">
+          &copy; Copyright <strong><span id="footer-year"></span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Designed with &hearts; by me.
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+
+    <!-- ===== SCROLL TO TOP BUTTON ===== -->
+    <button id="scrollTopBtn" title="Scroll to top" onclick="scrollToTop()">
+      <i class="bi bi-arrow-up-short"></i>
+    </button>
+  
+    <!-- Vendor JS Files -->
+    <script>
+      // Dark mode toggle
+      function myFunction() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+
+      // Legacy show/hide functions kept for any remaining uses
+      function toggleText(paragraphId, hiddenTxt, showLessBtnId) {
+        var hiddenText = document.getElementById(hiddenTxt);
+        var button = document.getElementById(paragraphId);
+        var showLessButton = document.getElementById(showLessBtnId);
+        button.style.display = "none";
+        if(button.style.display == "none"){
+          hiddenText.style.display = "block";
+          showLessButton.style.display = "block";
+        } else {
+          hiddenText.style.display = "none";
+        }
+      }
+
+      function toggleShowLessBtnText(showLessBtnId, hiddenTxt, paragraphId) {
+        var button = document.getElementById(showLessBtnId);
+        var hiddenText = document.getElementById(hiddenTxt);
+        var showMoreButton = document.getElementById(paragraphId);
+        button.style.display = "none";
+        hiddenText.style.display = "none";
+        showMoreButton.style.display = "block";
+      }
+
+      // ===== SCROLL TO TOP =====
+      var scrollBtn = document.getElementById('scrollTopBtn');
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add('visible');
+        } else {
+          scrollBtn.classList.remove('visible');
+        }
+      });
+
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Dynamic copyright year
+      document.getElementById('footer-year').textContent = 2023;
+    </script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+      function toggleMobileMenu() {
+        const navbar = document.getElementById('navbar');
+        navbar.classList.toggle('mobile-nav-active');
+      }
+
+      window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+          document.getElementById('navbar').classList.remove('mobile-nav-active');
+        }
+      });
+    </script>
+
+    <!-- Contact Form Script -->
+    <script>
+      (function() {
+        var form     = document.getElementById('contactForm');
+        var btn      = document.getElementById('cf-submit');
+        var feedback = document.getElementById('cf-feedback');
+
+        function validate(id, errId, checkFn) {
+          var el  = document.getElementById(id);
+          var err = document.getElementById(errId);
+          var ok  = checkFn(el.value.trim());
+          el.classList.toggle('invalid', !ok);
+          err.classList.toggle('visible', !ok);
+          return ok;
+        }
+
+        function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          var ok = true;
+          ok = validate('cf-name',    'err-name',    function(v){ return v.length >= 2; }) && ok;
+          ok = validate('cf-email',   'err-email',   isEmail)                              && ok;
+          ok = validate('cf-subject', 'err-subject', function(v){ return v.length >= 3; }) && ok;
+          ok = validate('cf-message', 'err-message', function(v){ return v.length >= 10; }) && ok;
+
+          if (!ok) return;
+
+          // Build mailto link as fallback (works without a backend)
+          var name    = document.getElementById('cf-name').value.trim();
+          var email   = document.getElementById('cf-email').value.trim();
+          var subject = document.getElementById('cf-subject').value.trim();
+          var message = document.getElementById('cf-message').value.trim();
+
+          var body = 'From: ' + name + ' (' + email + ')\n\n' + message;
+          var mailto = 'mailto:wattamwarsoham2000@gmail.com'
+                     + '?subject=' + encodeURIComponent(subject)
+                     + '&body='    + encodeURIComponent(body);
+
+          btn.disabled = true;
+          btn.querySelector('span').textContent = 'Opening mail client…';
+
+          window.location.href = mailto;
+
+          setTimeout(function() {
+            feedback.textContent = '✓ Mail client opened! Message ready to send.';
+            feedback.className = 'contact-form-feedback success';
+            btn.disabled = false;
+            btn.querySelector('span').textContent = 'Send Message';
+            form.reset();
+          }, 1200);
+        });
+
+        // Clear error on input
+        ['cf-name','cf-email','cf-subject','cf-message'].forEach(function(id) {
+          document.getElementById(id).addEventListener('input', function() {
+            this.classList.remove('invalid');
+            var errId = 'err-' + id.replace('cf-','');
+            var el = document.getElementById(errId);
+            if (el) el.classList.remove('visible');
+            feedback.textContent = '';
+            feedback.className = 'contact-form-feedback';
+          });
+        });
+      })();
+    </script>
+</body>
+
+</html>

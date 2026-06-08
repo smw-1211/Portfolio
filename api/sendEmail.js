@@ -30,6 +30,7 @@ export default async function handler(req, res) {
       service: !!process.env.EMAILJS_SERVICE_ID,
       template: !!process.env.EMAILJS_TEMPLATE_ID,
       publicKey: !!process.env.EMAILJS_PUBLIC_KEY,
+      accessToken: !!process.env.EMAILJS_PRIVATE_KEY,
     });
 
     // Send email via EmailJS API (server-to-server)
@@ -42,6 +43,7 @@ export default async function handler(req, res) {
         service_id: process.env.EMAILJS_SERVICE_ID,
         template_id: process.env.EMAILJS_TEMPLATE_ID,
         user_id: process.env.EMAILJS_PUBLIC_KEY,
+        accessToken: process.env.EMAILJS_PRIVATE_KEY,
         template_params: {
           to_email: process.env.CONTACT_EMAIL,
           from_name: from_name,
@@ -53,15 +55,37 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      throw new Error(`EmailJS API error: ${response.status}`);
+      const errorBody = await response.text();
+      console.error('EmailJS Error Body:', errorBody);
+    
+      throw new Error(
+        `EmailJS API error: ${response.status} - ${errorBody}`
+      );
     }
 
-    const result = await response.json();
-
-    return res.status(200).json({ 
-      success: true, 
-      message: 'Email sent successfully' 
+    if (!response.ok) {
+      const errorBody = await response.text();
+    
+      throw new Error(
+        `EmailJS API error: ${response.status} - ${errorBody}`
+      );
+    }
+    
+    const result = await response.text();
+    
+    console.log('EmailJS response:', result);
+    
+    return res.status(200).json({
+      success: true,
+      message: 'Email sent successfully'
     });
+
+    // const result = await response.json();
+
+    // return res.status(200).json({ 
+    //   success: true, 
+    //   message: 'Email sent successfully' 
+    // });
   } catch (error) {
     console.error('Email sending error:', error);
     return res.status(500).json({ 

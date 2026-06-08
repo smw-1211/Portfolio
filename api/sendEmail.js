@@ -53,7 +53,12 @@ export default async function handler(req, res) {
     });
 
     if (!response.ok) {
-      throw new Error(`EmailJS API error: ${response.status}`);
+      const errorBody = await response.text();
+      console.error('EmailJS Error Body:', errorBody);
+    
+      throw new Error(
+        `EmailJS API error: ${response.status} - ${errorBody}`
+      );
     }
 
     const result = await response.json();

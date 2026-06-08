@@ -63,12 +63,29 @@ export default async function handler(req, res) {
       );
     }
 
-    const result = await response.json();
-
-    return res.status(200).json({ 
-      success: true, 
-      message: 'Email sent successfully' 
+    if (!response.ok) {
+      const errorBody = await response.text();
+    
+      throw new Error(
+        `EmailJS API error: ${response.status} - ${errorBody}`
+      );
+    }
+    
+    const result = await response.text();
+    
+    console.log('EmailJS response:', result);
+    
+    return res.status(200).json({
+      success: true,
+      message: 'Email sent successfully'
     });
+
+    // const result = await response.json();
+
+    // return res.status(200).json({ 
+    //   success: true, 
+    //   message: 'Email sent successfully' 
+    // });
   } catch (error) {
     console.error('Email sending error:', error);
     return res.status(500).json({ 

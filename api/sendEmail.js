@@ -26,6 +26,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Invalid email address' });
     }
 
+    console.log({
+      service: !!process.env.EMAILJS_SERVICE_ID,
+      template: !!process.env.EMAILJS_TEMPLATE_ID,
+      publicKey: !!process.env.EMAILJS_PUBLIC_KEY,
+    });
+
     // Send email via EmailJS API (server-to-server)
     const response = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
       method: 'POST',

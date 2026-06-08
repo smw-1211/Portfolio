@@ -4,9 +4,7 @@
   "description": "Personal portfolio website",
   "main": "index.html",
   "scripts": {
-    "dev": "vercel dev",
-    "build": "vercel build",
-    "deploy": "vercel"
+    "dev": "vercel dev"
   },
   "dependencies": {},
   "devDependencies": {

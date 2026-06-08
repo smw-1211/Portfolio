@@ -1933,7 +1933,7 @@
     </script>
 
     <!-- Contact Form Script -->
-    <script>
+    <!-- <script>
       (function() {
         var form     = document.getElementById('contactForm');
         var btn      = document.getElementById('cf-submit');
@@ -1997,7 +1997,90 @@
           });
         });
       })();
-    </script>
+    </script> -->
+
+<script>
+  (function() {
+    var form     = document.getElementById('contactForm');
+    var btn      = document.getElementById('cf-submit');
+    var feedback = document.getElementById('cf-feedback');
+
+    function validate(id, errId, checkFn) {
+      var el  = document.getElementById(id);
+      var err = document.getElementById(errId);
+      var ok  = checkFn(el.value.trim());
+      el.classList.toggle('invalid', !ok);
+      err.classList.toggle('visible', !ok);
+      return ok;
+    }
+
+    function isEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var ok = true;
+      ok = validate('cf-name',    'err-name',    function(v){ return v.length >= 2; }) && ok;
+      ok = validate('cf-email',   'err-email',   isEmail)                              && ok;
+      ok = validate('cf-subject', 'err-subject', function(v){ return v.length >= 3; }) && ok;
+      ok = validate('cf-message', 'err-message', function(v){ return v.length >= 10; }) && ok;
+
+      if (!ok) return;
+
+      btn.disabled = true;
+      btn.querySelector('span').textContent = 'Sending…';
+      feedback.textContent = '';
+
+      var payload = {
+        from_name: document.getElementById('cf-name').value.trim(),
+        from_email: document.getElementById('cf-email').value.trim(),
+        subject: document.getElementById('cf-subject').value.trim(),
+        message: document.getElementById('cf-message').value.trim()
+      };
+
+      // Send to backend API
+      fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        if (data.success) {
+          feedback.textContent = '✓ Email sent successfully!';
+          feedback.className = 'contact-form-feedback success';
+          form.reset();
+          btn.disabled = false;
+          btn.querySelector('span').textContent = 'Send Message';
+        } else {
+          throw new Error(data.error || 'Failed to send email');
+        }
+      })
+      .catch(function(error) {
+        feedback.textContent = '✗ Failed to send. Try again.';
+        feedback.className = 'contact-form-feedback error';
+        btn.disabled = false;
+        btn.querySelector('span').textContent = 'Send Message';
+        console.error('Error:', error);
+      });
+    });
+
+    // Clear error on input
+    ['cf-name','cf-email','cf-subject','cf-message'].forEach(function(id) {
+      document.getElementById(id).addEventListener('input', function() {
+        this.classList.remove('invalid');
+        var errId = 'err-' + id.replace('cf-','');
+        var el = document.getElementById(errId);
+        if (el) el.classList.remove('visible');
+        feedback.textContent = '';
+        feedback.className = 'contact-form-feedback';
+      });
+    });
+  })();
+</script>
 </body>
 
 </html>
